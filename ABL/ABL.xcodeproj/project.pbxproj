@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C90028B91547AA040044B6AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028B81547AA040044B6AD /* Foundation.framework */; };
+		C90028BF1547AA040044B6AD /* ABL.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028BE1547AA040044B6AD /* ABL.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C90028B51547AA040044B6AD /* libABL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90028B81547AA040044B6AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
+		C90028BD1547AA040044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
+		C90028BE1547AA040044B6AD /* ABL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABL.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C90028B21547AA040044B6AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90028B91547AA040044B6AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C90028AA1547AA040044B6AD = {
+			isa = PBXGroup;
+			children = (
+				C90028BA1547AA040044B6AD /* ABL */,
+				C90028B71547AA040044B6AD /* Frameworks */,
+				C90028B61547AA040044B6AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C90028B61547AA040044B6AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C90028B51547AA040044B6AD /* libABL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C90028B71547AA040044B6AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C90028B81547AA040044B6AD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C90028BA1547AA040044B6AD /* ABL */ = {
+			isa = PBXGroup;
+			children = (
+				C90028BD1547AA040044B6AD /* ABL.h */,
+				C90028BE1547AA040044B6AD /* ABL.m */,
+				C90028BB1547AA040044B6AD /* Supporting Files */,
+			);
+			path = ABL;
+			sourceTree = "<group>";
+		};
+		C90028BB1547AA040044B6AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C90028BC1547AA040044B6AD /* ABL-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C90028B31547AA040044B6AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C90028B41547AA040044B6AD /* ABL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C90028C21547AA040044B6AD /* Build configuration list for PBXNativeTarget "ABL" */;
+			buildPhases = (
+				C90028B11547AA040044B6AD /* Sources */,
+				C90028B21547AA040044B6AD /* Frameworks */,
+				C90028B31547AA040044B6AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABL;
+			productName = ABL;
+			productReference = C90028B51547AA040044B6AD /* libABL.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C90028AC1547AA040044B6AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Matt Rubin";
+			};
+			buildConfigurationList = C90028AF1547AA040044B6AD /* Build configuration list for PBXProject "ABL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C90028AA1547AA040044B6AD;
+			productRefGroup = C90028B61547AA040044B6AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C90028B41547AA040044B6AD /* ABL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C90028B11547AA040044B6AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90028BF1547AA040044B6AD /* ABL.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C90028C01547AA040044B6AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C90028C11547AA040044B6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C90028C31547AA040044B6AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ABL.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABL/ABL-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C90028C41547AA040044B6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ABL.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABL/ABL-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C90028AF1547AA040044B6AD /* Build configuration list for PBXProject "ABL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C90028C01547AA040044B6AD /* Debug */,
+				C90028C11547AA040044B6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C90028C21547AA040044B6AD /* Build configuration list for PBXNativeTarget "ABL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C90028C31547AA040044B6AD /* Debug */,
+				C90028C41547AA040044B6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C90028AC1547AA040044B6AD /* Project object */;
+}
