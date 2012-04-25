@@ -12,7 +12,7 @@
 		C90028E11547AE530044B6AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028E01547AE530044B6AD /* CoreGraphics.framework */; };
 		C90028E71547AE530044B6AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C90028E51547AE530044B6AD /* InfoPlist.strings */; };
 		C90028E91547AE530044B6AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028E81547AE530044B6AD /* main.m */; };
-		C90028ED1547AE530044B6AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028EC1547AE530044B6AD /* AppDelegate.m */; };
+		C90028ED1547AE530044B6AD /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C90028EC1547AE530044B6AD /* AppDelegate.mm */; };
 		C90028FA1547B1AA0044B6AD /* libABL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028F91547B1AA0044B6AD /* libABL.a */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		C90028E81547AE530044B6AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C90028EA1547AE530044B6AD /* ABL on iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL on iOS-Prefix.pch"; sourceTree = "<group>"; };
 		C90028EB1547AE530044B6AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C90028EC1547AE530044B6AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C90028EC1547AE530044B6AD /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		C90028F91547B1AA0044B6AD /* libABL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				C90028EB1547AE530044B6AD /* AppDelegate.h */,
-				C90028EC1547AE530044B6AD /* AppDelegate.m */,
+				C90028EC1547AE530044B6AD /* AppDelegate.mm */,
 				C90028E31547AE530044B6AD /* Supporting Files */,
 			);
 			path = "ABL on iOS";
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C90028E91547AE530044B6AD /* main.m in Sources */,
-				C90028ED1547AE530044B6AD /* AppDelegate.m in Sources */,
+				C90028ED1547AE530044B6AD /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +271,7 @@
 				C90028F21547AE530044B6AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ABL/ABL.h"
+#import "ABL/ABL_CPP.h"
 
 @implementation AppDelegate
 
@@ -27,6 +28,7 @@
     [self.window makeKeyAndVisible];
 	
 	[ABL test];
+	ABL_CPP::test();
 	
     return YES;
 }
