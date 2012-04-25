@@ -1,5 +1,5 @@
 //
-//  ABL_CPP.cpp
+//  ABL.cpp
 //  ABL
 //
 //  Created by Matt Rubin on 4/24/12.
@@ -7,8 +7,8 @@
 //
 
 #include <iostream>
-#include "ABL_CPP.h"
+#include "ABL.h"
 
-void ABL_CPP::test(){
-	printf("ABL_CPP is linked.\n");
+void ABL::test(){
+	printf("ABL is linked.\n");
 }

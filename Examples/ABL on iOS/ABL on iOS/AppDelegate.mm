@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ABL/ABL_CPP.h"
+#import "ABL/ABL.h"
 
 @implementation AppDelegate
 
@@ -26,7 +26,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 	
-	ABL_CPP::test();
+	ABL::test();
 	
     return YES;
 }

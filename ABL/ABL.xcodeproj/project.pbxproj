@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C90029161547C8820044B6AD /* ABL_CPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL_CPP.cpp */; };
-		C90029171547C92F0044B6AD /* ABL_CPP.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL_CPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C90029161547C8820044B6AD /* ABL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL.cpp */; };
+		C90029171547C92F0044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C90028B51547AA040044B6AD /* libABL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
-		C90029131547C85A0044B6AD /* ABL_CPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL_CPP.h; sourceTree = "<group>"; };
-		C90029151547C8820044B6AD /* ABL_CPP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABL_CPP.cpp; sourceTree = "<group>"; };
+		C90029131547C85A0044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
+		C90029151547C8820044B6AD /* ABL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABL.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +48,8 @@
 		C90028BA1547AA040044B6AD /* ABL */ = {
 			isa = PBXGroup;
 			children = (
-				C90029131547C85A0044B6AD /* ABL_CPP.h */,
-				C90029151547C8820044B6AD /* ABL_CPP.cpp */,
+				C90029131547C85A0044B6AD /* ABL.h */,
+				C90029151547C8820044B6AD /* ABL.cpp */,
 				C90028BB1547AA040044B6AD /* Supporting Files */,
 			);
 			path = ABL;
@@ -70,7 +70,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90029171547C92F0044B6AD /* ABL_CPP.h in Headers */,
+				C90029171547C92F0044B6AD /* ABL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90029161547C8820044B6AD /* ABL_CPP.cpp in Sources */,
+				C90029161547C8820044B6AD /* ABL.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
