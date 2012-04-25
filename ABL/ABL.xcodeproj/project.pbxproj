@@ -7,19 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C90028B91547AA040044B6AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028B81547AA040044B6AD /* Foundation.framework */; };
-		C90028BF1547AA040044B6AD /* ABL.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028BE1547AA040044B6AD /* ABL.m */; };
-		C90028F51547B1310044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90028BD1547AA040044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C90029161547C8820044B6AD /* ABL_CPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL_CPP.cpp */; };
 		C90029171547C92F0044B6AD /* ABL_CPP.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL_CPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C90028B51547AA040044B6AD /* libABL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C90028B81547AA040044B6AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
-		C90028BD1547AA040044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
-		C90028BE1547AA040044B6AD /* ABL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABL.m; sourceTree = "<group>"; };
 		C90029131547C85A0044B6AD /* ABL_CPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL_CPP.h; sourceTree = "<group>"; };
 		C90029151547C8820044B6AD /* ABL_CPP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABL_CPP.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -29,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90028B91547AA040044B6AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				C90028BA1547AA040044B6AD /* ABL */,
-				C90028B71547AA040044B6AD /* Frameworks */,
 				C90028B61547AA040044B6AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,19 +45,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C90028B71547AA040044B6AD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C90028B81547AA040044B6AD /* Foundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C90028BA1547AA040044B6AD /* ABL */ = {
 			isa = PBXGroup;
 			children = (
-				C90028BD1547AA040044B6AD /* ABL.h */,
-				C90028BE1547AA040044B6AD /* ABL.m */,
 				C90029131547C85A0044B6AD /* ABL_CPP.h */,
 				C90029151547C8820044B6AD /* ABL_CPP.cpp */,
 				C90028BB1547AA040044B6AD /* Supporting Files */,
@@ -88,7 +70,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90028F51547B1310044B6AD /* ABL.h in Headers */,
 				C90029171547C92F0044B6AD /* ABL_CPP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +125,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90028BF1547AA040044B6AD /* ABL.m in Sources */,
 				C90029161547C8820044B6AD /* ABL_CPP.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
