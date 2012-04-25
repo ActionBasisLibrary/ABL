@@ -4,4 +4,11 @@
    <FileRef
       location = "group:ABL/ABL.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:Examples"
+      name = "Examples">
+      <FileRef
+         location = "group:ABL on iOS/ABL on iOS.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
