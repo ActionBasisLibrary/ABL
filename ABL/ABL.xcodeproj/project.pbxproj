@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C90028B91547AA040044B6AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028B81547AA040044B6AD /* Foundation.framework */; };
 		C90028BF1547AA040044B6AD /* ABL.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028BE1547AA040044B6AD /* ABL.m */; };
+		C90028F51547B1310044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90028BD1547AA040044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90028F51547B1310044B6AD /* ABL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +194,7 @@
 				GCC_PREFIX_HEADER = "ABL/ABL-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /ABL;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -204,6 +207,7 @@
 				GCC_PREFIX_HEADER = "ABL/ABL-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /ABL;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -227,6 +231,7 @@
 				C90028C41547AA040044B6AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

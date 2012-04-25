@@ -13,7 +13,7 @@
 		C90028E71547AE530044B6AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C90028E51547AE530044B6AD /* InfoPlist.strings */; };
 		C90028E91547AE530044B6AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028E81547AE530044B6AD /* main.m */; };
 		C90028ED1547AE530044B6AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C90028EC1547AE530044B6AD /* AppDelegate.m */; };
-		C90028F41547AFAB0044B6AD /* libABL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028F31547AFAB0044B6AD /* libABL.a */; };
+		C90028FA1547B1AA0044B6AD /* libABL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028F91547B1AA0044B6AD /* libABL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		C90028EA1547AE530044B6AD /* ABL on iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL on iOS-Prefix.pch"; sourceTree = "<group>"; };
 		C90028EB1547AE530044B6AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C90028EC1547AE530044B6AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C90028F31547AFAB0044B6AD /* libABL.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libABL.a; path = "../../ABL/build/Release-iphoneos/libABL.a"; sourceTree = "<group>"; };
+		C90028F91547B1AA0044B6AD /* libABL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90028F41547AFAB0044B6AD /* libABL.a in Frameworks */,
+				C90028FA1547B1AA0044B6AD /* libABL.a in Frameworks */,
 				C90028DD1547AE530044B6AD /* UIKit.framework in Frameworks */,
 				C90028DF1547AE530044B6AD /* Foundation.framework in Frameworks */,
 				C90028E11547AE530044B6AD /* CoreGraphics.framework in Frameworks */,
@@ -65,7 +65,7 @@
 		C90028DB1547AE530044B6AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C90028F31547AFAB0044B6AD /* libABL.a */,
+				C90028F91547B1AA0044B6AD /* libABL.a */,
 				C90028DC1547AE530044B6AD /* UIKit.framework */,
 				C90028DE1547AE530044B6AD /* Foundation.framework */,
 				C90028E01547AE530044B6AD /* CoreGraphics.framework */,
@@ -225,7 +225,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABL on iOS/ABL on iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "ABL on iOS/ABL on iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -236,7 +241,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ABL on iOS/ABL on iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "ABL on iOS/ABL on iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
