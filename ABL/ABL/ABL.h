@@ -10,4 +10,6 @@
 
 @interface ABL : NSObject
 
++ (void)test;
+
 @end

@@ -10,4 +10,8 @@
 
 @implementation ABL
 
++ (void)test{
+	NSLog(@"ABL is linked.");
+}
+
 @end
