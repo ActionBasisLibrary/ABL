@@ -5,9 +5,11 @@ cCheck dependencies
 cProcessPCH++ /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-flwyamyesnsymadphtwfzixxhwil/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH++ /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-gmhsmojfjxnrfmbzqguuevwcbfoh/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7
+cCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv6
+cLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7
 cCreateUniversalBinary /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a normal "armv6 armv7"
 cCpHeader ABL/ABL.h build/Debug-iphoneos/ABL/ABL.h
 
@@ -22,69 +24,94 @@ t1335385011
 s86
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp
-c000000004F985BB300000000000000D2
-t1335385011
+c000000004FA2FD5200000000000000D2
+t1336081746
 s210
 i<iostream>
 i"ABL.h"
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.h
-c000000004F985BB300000000000000CB
-t1335385011
+c000000004FA2FD5200000000000000CB
+t1336081746
 s203
 
+N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp
+c000000004FA2F98B000000000000009A
+t1336080779
+s154
+i"ABTransform.h"
+
+N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.h
+c000000004FA2FDEB000000000000027F
+t1336081899
+s639
+i<map>
+i<string>
+i<vector>
+
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.LinkFileList
-c000000004FA2F8680000000000000085
-t1336080488
-s133
+c000000004FA2FDC10000000000000112
+t1336081857
+s274
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o
-t2
-s0
+t1336081807
+s24704
+
+N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o
+t1336081899
+s424
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a
-t2
-s0
+t1336081899
+s25400
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.LinkFileList
-c000000004FA2F8680000000000000085
-t1336080488
-s133
+c000000004FA2FDC10000000000000112
+t1336081857
+s274
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o
-t2
-s0
+t1336081807
+s24768
+
+N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o
+t1336081899
+s424
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a
-t2
-s0
+t1336081899
+s25464
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/ABL/ABL.h
-t2
-s0
+t1336081807
+s203
 
 N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a
-t2
-s0
+t1336081899
+s50912
 
 N/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-flwyamyesnsymadphtwfzixxhwil/ABL-Prefix.pch.pth
-t2
-s0
+t1336080488
+s56488
 
 N/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-gmhsmojfjxnrfmbzqguuevwcbfoh/ABL-Prefix.pch.pth
-t2
-s0
+t1336080488
+s56632
 
 CBuild AST from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp
 r0
 
+CBuild AST from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp
+r0
+
 CCheck dependencies
 r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies94f58fe82f53b541^0abdbae82f53b541^---0#1#0#--18"Check dependencies
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies255b19193653b541^25c91b193653b541^---0#1#0#--18"Check dependencies
 
 CCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357773288.769412
-e357773290.001901
+s357774607.114380
+e357774607.491146
 r1
 xCompileC
 xbuild/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o
@@ -93,11 +120,24 @@ xnormal
 xarmv6
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0a14c5e82f53b541^857c00ea2f53b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0000000000000000^2225"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o ABL/ABL.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv6 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv6 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-flwyamyesnsymadphtwfzixxhwil/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cppdf6e1d0f3553b541^06bb7d0f3553b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0000000000000000^2225"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o ABL/ABL.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv6 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv6 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-flwyamyesnsymadphtwfzixxhwil/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.o
+
+CCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s357774699.475728
+e357774699.737747
+r1
+xCompileC
+xbuild/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o
+x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp
+xnormal
+xarmv6
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp55f6796b3553b541^49dbbc6b3553b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp0000000000000000^2277"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o ABL/Transform/ABTransform.cpp normal armv6 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv6 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv6 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-flwyamyesnsymadphtwfzixxhwil/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o
 
 CCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357773288.771885
-e357773289.999170
+s357774607.114680
+e357774607.494806
 r1
 xCompileC
 xbuild/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o
@@ -106,48 +146,74 @@ xnormal
 xarmv7
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp6bb7c5e82f53b541^9bc9ffe92f53b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0000000000000000^2225"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o ABL/ABL.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv7 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-gmhsmojfjxnrfmbzqguuevwcbfoh/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp04721d0f3553b541^36ab7e0f3553b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0000000000000000^2225"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o ABL/ABL.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv7 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-gmhsmojfjxnrfmbzqguuevwcbfoh/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.o
+
+CCompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s357774699.472646
+e357774699.733043
+r1
+xCompileC
+xbuild/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o
+x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp6d3b796b3553b541^a4a8bb6b3553b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp0000000000000000^2277"CompileC build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o ABL/Transform/ABTransform.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x c++ -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources/armv7 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-gmhsmojfjxnrfmbzqguuevwcbfoh/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transform/ABTransform.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o
 
 CCpHeader ABL/ABL.h build/Debug-iphoneos/ABL/ABL.h
-s357773290.080238
-e357773290.083799
+s357774607.528108
+e357774607.530817
 r1
 xCpHeader
 xABL/ABL.h
 xbuild/Debug-iphoneos/ABL/ABL.h
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Copy build/Debug-iphoneos/ABL/ABL.h97aa14ea2f53b541^827415ea2f53b541^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/ABL/ABL.h0000204d2205f041^510"CpHeader ABL/ABL.h build/Debug-iphoneos/ABL/ABL.h    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.h /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/ABL
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Copy build/Debug-iphoneos/ABL/ABL.ha643870f3553b541^d2e3870f3553b541^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/ABL/ABL.h0000000000000000^510"CpHeader ABL/ABL.h build/Debug-iphoneos/ABL/ABL.h    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.h /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/ABL
 
 CCreateUniversalBinary /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a normal "armv6 armv7"
-s357773290.048731
-e357773290.077803
+s357774699.751954
+e357774699.766660
 r1
 xCreateUniversalBinary
 x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a
 xnormal
 xarmv6 armv7
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Create universal binary /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.ab58c0cea2f53b541^2dea13ea2f53b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a0000204d2205f041^716"CreateUniversalBinary build/Debug-iphoneos/libABL.a normal "armv6 armv7"    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: for architecture: armv6 file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a(ABTransform.o) has no symbols
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: for architecture: armv7 file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a(ABTransform.o) has no symbols
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Create universal binary /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.aff92c06b3553b541^1844c46b3553b541^-524"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: for architecture: armv6 file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a(ABTransform.o) has no symbols/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: for architecture: armv7 file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a(ABTransform.o) has no symbols-0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a0000000000000000^716"CreateUniversalBinary build/Debug-iphoneos/libABL.a normal "armv6 armv7"    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a
 
 CLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv6
-s357773290.003079
-e357773290.047520
+s357774699.738928
+e357774699.750736
 r1
 xLibtool
 x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a
 xnormal
 xarmv6
 o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv68ee600ea2f53b541^242a0cea2f53b541^-129"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--893"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv6    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv6 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -filelist /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.LinkFileList -ObjC -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o has no symbols
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv66748bd6b3553b541^a130c06b3553b541^-357"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABTransform.o has no symbols-0#0#0#--893"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a normal armv6    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv6 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -filelist /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/ABL.LinkFileList -ObjC -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv6/libABL.a
 
 CLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7
-s357773290.000422
-e357773290.047556
+s357774699.734268
+e357774699.747570
 r1
 xLibtool
 x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a
 xnormal
 xarmv7
 o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7ca3200ea2f53b541^be310cea2f53b541^-129"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--893"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv7 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -filelist /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.LinkFileList -ObjC -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o has no symbols
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv72712bc6b3553b541^0261bf6b3553b541^-357"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: file: /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABTransform.o has no symbols-0#0#0#--893"Libtool build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a normal armv7    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv7 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos -filelist /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/ABL.LinkFileList -ObjC -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphoneos/ABL.build/Objects-normal/armv7/libABL.a
+
+CLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphoneos/libABL.a normal armv7
+r0
+
+CProcessPCH++ /Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-cixljrpbizomjaaehglyghdakqzr/Index/PrecompiledHeaders/ABL-Prefix-dsrcyekzpsugzlfozurkgypszmbs_ast/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-cixljrpbizomjaaehglyghdakqzr/Index/PrecompiledHeaders/ABL-Prefix-geddmkcapqatjjdhnqxfpqnxqfkd_ast/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal armv6 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
 
 CProcessPCH++ /Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-epmrwspgpmdbbcdkmsretknrgpdi/Index/PrecompiledHeaders/ABL-Prefix-dsrcyekzpsugzlfozurkgypszmbs_ast/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal armv7 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
