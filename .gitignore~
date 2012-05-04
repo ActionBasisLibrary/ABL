@@ -9,5 +9,3 @@ profile
 
 # Project-Specific
 !ABL.xcworkspace
-
-build/

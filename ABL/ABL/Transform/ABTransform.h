@@ -10,6 +10,8 @@
 #include <string>
 #include <vector>
 
+#include "ABSymbol.h"
+
 using namespace std;
 
 class ABTransform {
@@ -18,24 +20,32 @@ public:
     
 private:
     // Private definitions
-    typedef string Symbol;
     typedef unsigned int SymId;
-    typedef float symVal;
     
     // Private member variables
-    bool linked;
-    map<Symbol, SymId> symbols;
-    vector<symVal> symVals;
+    bool linked, manageSyms;
+    SymId numSyms;
+    map<string, SymId> symMap;
+    vector<ABSymbol*> symbols;
     
 public:
     // Public methods
-    
-    ABTransform();
+    ABTransform(bool manageSymbols = false);
     ~ABTransform();
     
-    void addInput();
+    void deleteSymbols();
+    
+    // Methods to get values
+    
+    const float *getValue(string name);
+    
+    // Methods to modify symbol tree
+    
+    void addSymbol(string name, ABSymbol *sym);
     
 private:
     // Private methods
-
+    void modifyTree();
+    void link();
+    
 };
