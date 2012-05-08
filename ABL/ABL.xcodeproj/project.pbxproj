@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1223D4B31559E052005C3D7F /* GTimer.cpp */; };
+		1223D4B61559E052005C3D7F /* GTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1223D4B41559E052005C3D7F /* GTimer.h */; };
 		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */; };
 		12856A5B1553353E00953855 /* ABTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A591553353E00953855 /* ABTransform.cpp */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1223D4B31559E052005C3D7F /* GTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GTimer.cpp; sourceTree = "<group>"; };
+		1223D4B41559E052005C3D7F /* GTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimer.h; sourceTree = "<group>"; };
 		124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymbolSubclasses.h; sourceTree = "<group>"; };
 		124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbolSubclasses.cpp; sourceTree = "<group>"; };
 		12856A591553353E00953855 /* ABTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABTransform.cpp; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1223D4B21559DFEC005C3D7F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1223D4B31559E052005C3D7F /* GTimer.cpp */,
+				1223D4B41559E052005C3D7F /* GTimer.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		12856A571553351C00953855 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				12856A571553351C00953855 /* Transform */,
+				1223D4B21559DFEC005C3D7F /* Utilities */,
 				C90029131547C85A0044B6AD /* ABL.h */,
 				C90029151547C8820044B6AD /* ABL.cpp */,
 				C90028BB1547AA040044B6AD /* Supporting Files */,
@@ -100,6 +114,7 @@
 				12856A5C1553353E00953855 /* ABTransform.h in Headers */,
 				12856A67155336D800953855 /* ABSymbol.h in Headers */,
 				124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */,
+				1223D4B61559E052005C3D7F /* GTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +173,7 @@
 				12856A5B1553353E00953855 /* ABTransform.cpp in Sources */,
 				12856A66155336D800953855 /* ABSymbol.cpp in Sources */,
 				124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */,
+				1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,12 @@
 
 #include "ABSymbol.h"
 
+#pragma mark SUPER CLASS SYMBOLS
+
+/*
+ * Symbol designed to automatically update over time
+ */
+
 #pragma mark LIGHTWEIGHT SYMBOLS
 
 /*
