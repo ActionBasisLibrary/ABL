@@ -12,6 +12,11 @@
 class ABL {
 public:
 	static void test();
+    
+    
+private:
+    static void testSymbols();
+    static void testTransform();
 };
 
 #endif

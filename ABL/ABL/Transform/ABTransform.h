@@ -6,6 +6,9 @@
 //  Copyright 2012 Matt Rubin. All rights reserved.
 //
 
+#ifndef AB_TRANSFORM_H
+#define AB_TRANSFORM_H
+
 #include <map>
 #include <string>
 #include <vector>
@@ -49,3 +52,5 @@ private:
     void link();
     
 };
+
+#endif

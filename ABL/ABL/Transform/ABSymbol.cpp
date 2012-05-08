@@ -65,13 +65,13 @@ const float *ABSymbol::getValues()
 
 #pragma SUBCLASSES
 
-ABSymSingle::ABSymSingle(string name)
-: ABSymbol(name, 1)
+ABSymSingle::ABSymSingle(string name, unsigned int card)
+: ABSymbol(name, card)
 {
     updated = true;
 }
 
-void ABSymSingle::setValue(float val)
+void ABSymSingle::setValues(float *someVals)
 {
-    vals[0] = val;
+    memcpy(vals, someVals, card * sizeof(float));
 }

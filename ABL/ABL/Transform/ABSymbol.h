@@ -6,6 +6,9 @@
 //  Copyright 2012 Matt Rubin. All rights reserved.
 //
 
+#ifndef AB_SYMBOL_H
+#define AB_SYMBOL_H
+
 #include <vector>
 #include <string>
 
@@ -52,7 +55,9 @@ public:
 
 class ABSymSingle : public ABSymbol {
 public:
-    ABSymSingle(string name);
+    ABSymSingle(string name, unsigned int card);
     
-    void setValue(float val);
+    void setValues(float *someVals);
 };
+
+#endif

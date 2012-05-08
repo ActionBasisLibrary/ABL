@@ -1,246 +1,0 @@
-TABL on iOS
-v3
-r1
-cCheck dependencies
-cProcessInfoPlistFile "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/Info.plist" "ABL on iOS/ABL on iOS-Info.plist"
-cProcessPCH "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH++ "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o" "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o" "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
-c000000004D93ED360000000000000110
-t1301540150
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004D93DF6900000000002999B0
-t1301536617
-s2726320
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004D93DFEA000000000029DA70
-t1301536746
-s2742896
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004D93DFDD0000000000001466
-t1301536733
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004D93ECBE0000000000000AA1
-t1301540030
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004D93ED1B0000000000766870
-t1301540123
-s7759984
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
-c000000004D4F7A2B0000000000001B19
-t1297054251
-s6937
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/ABL on iOS-Prefix.pch
-c000000004F985BB3000000000000013D
-t1335385011
-s317
-i<Availability.h>
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h
-c000000004F985BB30000000000000116
-t1335385011
-s278
-i<UIKit/UIKit.h>
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm
-c000000004F985BB300000000000008FD
-t1335385011
-s2301
-i"AppDelegate.h"
-i"ABL/ABL.h"
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/en.lproj/InfoPlist.strings
-c000000004F985BB3000000000000002D
-t1335385011
-s45
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m
-c000000004F985BB30000000000000148
-t1335385011
-s328
-i<UIKit/UIKit.h>
-i"AppDelegate.h"
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/ABL on iOS.LinkFileList
-c000000004FA2FE1D000000000000015B
-t1336081949
-s347
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app.dSYM
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/ABL on iOS
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/Info.plist
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/PkgInfo
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/en.lproj/InfoPlist.strings
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/libABL.a
-c00000000000000000000000000000000
-t2
-s0
-
-N/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth
-t2
-s0
-
-N/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth
-t2
-s0
-
-NABL on iOS/ABL on iOS-Info.plist
-c000000004F985BB300000000000005BD
-t1335385011
-s1469
-
-CBuild AST from "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm"
-r0
-
-CBuild AST from "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m"
-r0
-
-CCheck dependencies
-r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2d97059d3553b541^bfef0f9d3553b541^---0#1#0#--18"Check dependencies
-
-CCompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o" "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357774751.683134
-e357774752.393250
-r0
-xCompileC
-xbuild/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o
-x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-oIn file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:9:
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:12: error: unknown property attribute 'strong' [3]
-o @property (strong, nonatomic) UIWindow *window;
-o            ^
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [2]
-o @property (strong, nonatomic) UIWindow *window;
-o ^
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object [2]
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:10:9: fatal error: 'ABL/ABL.h' file not found [1]
-o #import "ABL/ABL.h"
-o         ^
-o2 warnings and 2 errors generated.
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm111caf9f3553b541^baa264a03553b541^-1029"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:9:/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:12: error: unknown property attribute 'strong' [3] @property (strong, nonatomic) UIWindow *window;            ^/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [2] @property (strong, nonatomic) UIWindow *window; ^/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object [2]/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:10:9: fatal error: 'ABL/ABL.h' file not found [1] #import "ABL/ABL.h"         ^2 warnings and 2 errors generated.4(21%IDEActivityLogMessage2@35"Unknown property attribute 'strong'-357774752#132#160#2(36%IDEActivityLogHeaderInclusionMessage3@131"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:9:-357774752#0#132#-0#-23%DVTTextDocumentLocation4@130"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.mm0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---2@144"Unknown property attribute 'strong' in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#11#12#11#18446744073709551615#0#---2#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#11#12#11#18446744073709551615#0#11"Parse Issue--2@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed-357774752#355#203#2(3@131"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:9:-357774752#18446744073709551615#0#-0#-4@130"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.mm0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---2@186"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#---1#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#14"Semantic Issue--2@69"Default property attribute 'assign' not appropriate for non-gc object-357774752#610#195#2(3@131"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm:9:-357774752#18446744073709551615#0#-0#-4@130"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.mm0000000000000000^8#18446744073709551615#8#18446744073709551615#18446744073709551615#0#---2@178"Default property attribute 'assign' not appropriate for non-gc object in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#---1#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#14"Semantic Issue--2@26"'ABL/ABL.h' file not found-357774752#805#157#-2#-4@130"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.mm0000000000000000^9#8#9#8#18446744073709551615#0#29"Lexical or Preprocessor Issue--0#0#0#-19%DVTDocumentLocation5@130"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.mm0000000000000000^2985"CompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o" "ABL on iOS/AppDelegate.mm" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility-inlines-hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-generated-files.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-own-target-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-all-target-headers.hmap" -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-project-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/include" -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL -Ion -IiOS/build/Debug-iphonesimulator "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources/i386" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources" "-F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator" -include "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch" -c "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.mm" -o "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/AppDelegate.o"
-
-CCompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o" "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s357774751.697056
-e357774752.393057
-r0
-xCompileC
-xbuild/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o
-x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-oIn file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:11:
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:12: error: unknown property attribute 'strong' [3]
-o @property (strong, nonatomic) UIWindow *window;
-o            ^
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [2]
-o @property (strong, nonatomic) UIWindow *window;
-o ^
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object [2]
-o/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:15:2: error: unexpected '@' in program [3]
-o         @autoreleasepool {
-o         ^
-o2 warnings and 2 errors generated.
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m05a3b29f3553b541^869364a03553b541^-1014"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:11:/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:12: error: unknown property attribute 'strong' [3] @property (strong, nonatomic) UIWindow *window;            ^/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [2] @property (strong, nonatomic) UIWindow *window; ^/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object [2]/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:15:2: error: unexpected '@' in program [3]         @autoreleasepool {         ^2 warnings and 2 errors generated.4(21%IDEActivityLogMessage2@35"Unknown property attribute 'strong'-357774752#125#160#2(36%IDEActivityLogHeaderInclusionMessage3@124"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:11:-357774752#0#125#-0#-23%DVTTextDocumentLocation4@122"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/main.m0000000000000000^10#18446744073709551615#10#18446744073709551615#18446744073709551615#0#---2@144"Unknown property attribute 'strong' in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#11#12#11#18446744073709551615#0#---2#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#11#12#11#18446744073709551615#0#11"Parse Issue--2@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed-357774752#348#203#2(3@124"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:11:-357774752#18446744073709551615#0#-0#-4@122"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/main.m0000000000000000^10#18446744073709551615#10#18446744073709551615#18446744073709551615#0#---2@186"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#---1#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#14"Semantic Issue--2@69"Default property attribute 'assign' not appropriate for non-gc object-357774752#603#195#2(3@124"In file included from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m:11:-357774752#18446744073709551615#0#-0#-4@122"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/main.m0000000000000000^10#18446744073709551615#10#18446744073709551615#18446744073709551615#0#---2@178"Default property attribute 'assign' not appropriate for non-gc object in /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/AppDelegate.h-357774752#18446744073709551615#0#-0#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#---1#-4@129"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/AppDelegate.h0000000000000000^12#0#12#0#18446744073709551615#0#14"Semantic Issue--2@25"Unexpected '@' in program-357774752#798#142#-2#-4@122"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/main.m0000000000000000^14#1#14#1#18446744073709551615#0#11"Parse Issue--0#0#0#-19%DVTDocumentLocation5@122"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/main.m0000000000000000^2934"CompileC "build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o" "ABL on iOS/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-generated-files.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-own-target-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-all-target-headers.hmap" -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-project-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/include" -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL -Ion -IiOS/build/Debug-iphonesimulator "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources/i386" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources" "-F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator" -include "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch" -c "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/main.m" -o "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/Objects-normal/i386/main.o"
-
-CCopyStringsFile "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/en.lproj/InfoPlist.strings" "ABL on iOS/en.lproj/InfoPlist.strings"
-r0
-
-CGenerateDSYMFile "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app.dSYM" "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/ABL on iOS"
-r0
-
-CLd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/ABL on iOS" normal i386
-r0
-
-CProcessInfoPlistFile "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/Info.plist" "ABL on iOS/ABL on iOS-Info.plist"
-s357774749.068156
-e357774749.127230
-r1
-xProcessInfoPlistFile
-x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/Info.plist
-xABL on iOS/ABL on iOS-Info.plist
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Process ABL on iOS/ABL on iOS-Info.plist378d119d3553b541^2592209d3553b541^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/ABL%20on%20iOS-Info.plist0000000000000000^745"ProcessInfoPlistFile "build/Debug-iphonesimulator/ABL on iOS.app/Info.plist" "ABL on iOS/ABL on iOS-Info.plist"    cd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility "ABL on iOS/ABL on iOS-Info.plist" -genpkginfo "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app/Info.plist"
-
-CProcessPCH "/Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-epmrwspgpmdbbcdkmsretknrgpdi/Index/PrecompiledHeaders/ABL on iOS-Prefix-bsjpafsaplhmycfwpeozvtcwagre_ast/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s357774749.129699
-e357774751.695800
-r1
-xProcessPCH
-x/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth
-xABL on iOS/ABL on iOS-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile ABL on iOS/ABL on iOS-Prefix.pch925d219d3553b541^821eb29f3553b541^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/ABL%20on%20iOS-Prefix.pch0000000000000000^2878"ProcessPCH "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-generated-files.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-own-target-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-all-target-headers.hmap" -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-project-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/include" -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL -Ion -IiOS/build/Debug-iphonesimulator "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources/i386" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources" "-F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator" -c "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/ABL on iOS-Prefix.pch" -o "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-ayenllxsqujgdgesficglnekxdbv/ABL on iOS-Prefix.pch.pth"
-
-CProcessPCH++ "/Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-epmrwspgpmdbbcdkmsretknrgpdi/Index/PrecompiledHeaders/ABL on iOS-Prefix-cgmeymkiauwxnucvylbuthyjlxkl_ast/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357774749.130127
-e357774751.681869
-r1
-xProcessPCH++
-x/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth
-xABL on iOS/ABL on iOS-Prefix.pch
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile ABL on iOS/ABL on iOS-Prefix.pch7f6d219d3553b541^938eae9f3553b541^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL%20on%20iOS/ABL%20on%20iOS/ABL%20on%20iOS-Prefix.pch0000000000000000^2901"ProcessPCH++ "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth" "ABL on iOS/ABL on iOS-Prefix.pch" normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c++-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility-inlines-hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-generated-files.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-own-target-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-all-target-headers.hmap" -iquote "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/ABL on iOS-project-headers.hmap" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/include" -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL -Ion -IiOS/build/Debug-iphonesimulator "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources/i386" "-I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/ABL on iOS.build/Debug-iphonesimulator/ABL on iOS.build/DerivedSources" "-F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator" -c "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/ABL on iOS/ABL on iOS-Prefix.pch" -o "/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL on iOS-Prefix-fqzynauknventzgwydhrepehtbrb/ABL on iOS-Prefix.pch.pth"
-
-CTouch "/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/Examples/ABL on iOS/build/Debug-iphonesimulator/ABL on iOS.app"
-r0
-

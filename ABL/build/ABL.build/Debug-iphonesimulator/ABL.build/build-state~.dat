@@ -1,120 +1,0 @@
-TABL
-v3
-r1
-cCheck dependencies
-cProcessPCH++ /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
-c000000004D93ED360000000000000110
-t1301540150
-s272
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL-Prefix.pch
-c000000004F985BB30000000000000056
-t1335385011
-s86
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp
-c000000004F985BB300000000000000D2
-t1335385011
-s210
-i<iostream>
-i"ABL.h"
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.h
-c000000004F985BB300000000000000CB
-t1335385011
-s203
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.LinkFileList
-c000000004FA2FB17000000000000011E
-t1336081175
-s286
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/ABL/ABL.h
-t2
-s0
-
-N/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/libABL.a
-t2
-s0
-
-N/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth
-t2
-s0
-
-CBuild AST from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp
-r0
-
-CBuild AST from /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies4b8f1e973253b541^2b8544973253b541^---0#1#0#--18"Check dependencies
-
-CCompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357773975.342694
-e357773976.157661
-r1
-xCompileC
-xbuild/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o
-x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0ad757973253b541^9a5c28983253b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp0000000000000000^2376"CompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o ABL/ABL.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources/i386 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABL.o
-
-CCompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357773975.342712
-e357773975.557490
-r0
-xCompileC
-xbuild/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o
-x/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-oclang: error: no such file or directory: '/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp'
-oclang: error: no input files
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cppdae157973253b541^19ae8e973253b541^-292"clang: error: no such file or directory: '/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp'clang: error: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang failed with exit code 11(21%IDEActivityLogMessage2@101"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang failed with exit code 1-357773975#18446744073709551615#0#-2#--14"Semantic Issue--0#0#0#-19%DVTDocumentLocation3@133"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp0000204d2205f041^2474"CompileC build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o ABL/Transformation/../../../../../../ABTransform.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources/i386 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator -include /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/Transformation/../../../../../../ABTransform.cpp -o /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/Objects-normal/i386/ABTransform.o
-
-CCpHeader ABL/ABL.h build/Debug-iphonesimulator/ABL/ABL.h
-r0
-
-CLibtool /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/libABL.a normal i386
-r0
-
-CProcessPCH++ /Users/CalebJordan/Library/Developer/Xcode/DerivedData/ABL-epmrwspgpmdbbcdkmsretknrgpdi/Index/PrecompiledHeaders/ABL-Prefix-fbhnlzhyugsjokasnaevycgaakrg_ast/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s357773975.271485
-e357773975.341480
-r1
-xProcessPCH++
-x/var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth
-xABL/ABL-Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection29"Precompile ABL/ABL-Prefix.pchf29845973253b541^b96d57973253b541^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL-Prefix.pch0000000000000000^2340"ProcessPCH++ /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth ABL/ABL-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-generated-files.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-own-target-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-all-target-headers.hmap -iquote /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/ABL-project-headers.hmap -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator/include -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources/i386 -I/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/ABL.build/Debug-iphonesimulator/ABL.build/DerivedSources -F/Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/build/Debug-iphonesimulator -c /Users/CalebJordan/Documents/Projects/ActionBasisLibrary/ABL/ABL/ABL/ABL-Prefix.pch -o /var/folders/XA/XAiykk5tGfK9+pAezlwrMU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ABL-Prefix-dzonthyobcyfqtfqncmygzoqqamr/ABL-Prefix.pch.pth
-
