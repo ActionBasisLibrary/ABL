@@ -10,7 +10,7 @@
 
 ABSymbol::ABSymbol(string name, unsigned int card, vector<string> &inputs)
 : name(name), card(card), inputNames(inputs), numInputs(inputs.size()),
-vals(new float[card]), dataState(CLEAN)
+vals(new double[card]), dataState(CLEAN)
 {
     inputSyms = new ABSymbol* [numInputs];
     for (size_t i = 0; i < numInputs; i++)
@@ -19,7 +19,7 @@ vals(new float[card]), dataState(CLEAN)
 
 ABSymbol::ABSymbol(string name, unsigned int card, string input)
 : name(name), card(card), numInputs(1),
-vals(new float[card]), dataState(CLEAN)
+vals(new double[card]), dataState(CLEAN)
 {    
     inputNames.push_back(input);
     
@@ -30,7 +30,7 @@ vals(new float[card]), dataState(CLEAN)
 
 ABSymbol::ABSymbol(string name, unsigned int card)
 : name(name), card(card), inputNames(), numInputs(0),
-vals(new float[card]), dataState(CLEAN)
+vals(new double[card]), dataState(CLEAN)
 {
     inputSyms = NULL;
 }

@@ -22,7 +22,7 @@ void ABL::testSymbols()
     
     ABSymbol *syms[3];
     syms[0] = new ABSymSingle("numbers", 6);
-    float nums[6] = {0, 1, 2, 3, 4, 5};
+    double nums[6] = {0, 1, 2, 3, 4, 5};
     ((ABSymSingle*)syms[0])->setValues(nums);
     
     vector<string> inputs;
@@ -52,7 +52,7 @@ void ABL::testSymbols()
     delete syms[1];
 }
 
-bool pullTime(float *buff)
+bool pullTime(double *buff)
 {
     *buff = clock();
     return true;
@@ -82,11 +82,11 @@ void ABL::testTransform()
     transform.addSymbols(mean, 3);
     transform.addSymbol(comp);
     
-    float pos0[] = {0, 1, 2, 3, 4, 5};
-    float pos1[] = {0, 1, 2, 3};
-    float pos2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    double pos0[] = {0, 1, 2, 3, 4, 5};
+    double pos1[] = {0, 1, 2, 3};
+    double pos2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    const float *vals = transform.getValue("composite");
+    const double *vals = transform.getValue("composite");
     printf("Vals: %f %f %f\n", vals[0], vals[1], vals[2]);
     cout << comp->toString() << endl;
     
@@ -94,13 +94,13 @@ void ABL::testTransform()
     ((ABSymSingle*)pos[1])->setValues(pos1);
     ((ABSymSingle*)pos[2])->setValues(pos2);
     
-    const float *vals2 = transform.getValue("composite");
+    const double *vals2 = transform.getValue("composite");
     printf("Vals: %f %f %f\n", vals2[0], vals2[1], vals2[2]);
     cout << comp->toString() << endl;
     
     transform.addSymbol(pos[2]);
     
-    const float *vals3 = transform.getValue("composite");
+    const double *vals3 = transform.getValue("composite");
     printf("Vals: %f %f %f\n", vals3[0], vals3[1], vals3[2]);
     cout << comp->toString() << endl;
     

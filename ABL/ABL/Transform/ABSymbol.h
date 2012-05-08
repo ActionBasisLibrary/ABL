@@ -22,7 +22,7 @@ using namespace std;
  */
 class ABSymbol {
 protected:
-    float *vals;
+    double *vals;
     ABSymbol **inputSyms;
     
     /*
@@ -58,8 +58,8 @@ public:
     /*
      * Methods for access the values and setting dependencies
      */
-    inline const float *getValues() { return vals; }
-    inline float getValue(unsigned int i) { return vals[i]; }
+    inline const double *getValues() { return vals; }
+    inline double getValue(unsigned int i) { return vals[i]; }
     
     inline const string &getName() { return name; }
     

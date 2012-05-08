@@ -40,7 +40,7 @@ public:
     
     // Methods to get values
     
-    const float *getValue(string name);
+    const double *getValue(string name);
     
     // Methods to modify symbol tree
     

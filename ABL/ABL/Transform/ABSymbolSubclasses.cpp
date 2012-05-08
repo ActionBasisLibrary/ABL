@@ -16,13 +16,13 @@ ABSymSingle::ABSymSingle(string name, unsigned int card)
     dataState = CLEAN;
 }
 
-void ABSymSingle::setValues(float *someVals)
+void ABSymSingle::setValues(double *someVals)
 {
-    memcpy(vals, someVals, getCard() * sizeof(float));
+    memcpy(vals, someVals, getCard() * sizeof(double));
     dataState = DIRTY;
 }
 
-ABSymPull::ABSymPull(string name, unsigned int card, bool(*fnPtr)(float *ptr))
+ABSymPull::ABSymPull(string name, unsigned int card, bool(*fnPtr)(double *ptr))
 : ABSymbol(name, card), pullFunc(fnPtr)
 {
     dataState = DIRTY;
@@ -30,9 +30,9 @@ ABSymPull::ABSymPull(string name, unsigned int card, bool(*fnPtr)(float *ptr))
 
 ABSymbol::DataState ABSymPull::update()
 {
-    float buff[getCard()];
+    double buff[getCard()];
     if (pullFunc(buff)) {
-        memcpy(vals, buff, getCard() * sizeof(float));
+        memcpy(vals, buff, getCard() * sizeof(double));
         dataState = CLEAN;
         return DIRTY;
     } else {
@@ -61,7 +61,7 @@ ABSymMean::DataState ABSymMean::update()
     
     for (unsigned int i = 0; i < getCard(); i++) {
         if (!inputSyms[i]) continue;
-        const float *inVals = inputSyms[i]->getValues();
+        const double *inVals = inputSyms[i]->getValues();
         
         vals[i] = 0.0;
         for (unsigned int j = 0; j < inputSyms[i]->getCard(); j++)

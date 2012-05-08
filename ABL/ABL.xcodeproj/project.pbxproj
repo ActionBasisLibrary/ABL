@@ -22,16 +22,16 @@
 /* Begin PBXFileReference section */
 		1223D4B31559E052005C3D7F /* GTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GTimer.cpp; sourceTree = "<group>"; };
 		1223D4B41559E052005C3D7F /* GTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimer.h; sourceTree = "<group>"; };
-		124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymbolSubclasses.h; sourceTree = "<group>"; };
-		124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbolSubclasses.cpp; sourceTree = "<group>"; };
-		12856A591553353E00953855 /* ABTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABTransform.cpp; sourceTree = "<group>"; };
-		12856A5A1553353E00953855 /* ABTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTransform.h; sourceTree = "<group>"; };
-		12856A64155336D800953855 /* ABSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbol.cpp; sourceTree = "<group>"; };
-		12856A65155336D800953855 /* ABSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymbol.h; sourceTree = "<group>"; };
+		124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABSymbolSubclasses.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABSymbolSubclasses.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		12856A591553353E00953855 /* ABTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABTransform.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		12856A5A1553353E00953855 /* ABTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABTransform.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		12856A64155336D800953855 /* ABSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABSymbol.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		12856A65155336D800953855 /* ABSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABSymbol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C90028B51547AA040044B6AD /* libABL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
 		C90029131547C85A0044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
-		C90029151547C8820044B6AD /* ABL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABL.cpp; sourceTree = "<group>"; };
+		C90029151547C8820044B6AD /* ABL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABL.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

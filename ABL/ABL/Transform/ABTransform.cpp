@@ -30,7 +30,7 @@ void ABTransform::deleteSymbols()
 
 // Methods to get values
 
-const float *ABTransform::getValue(string name)
+const double *ABTransform::getValue(string name)
 {
     if (!linked) link();
     

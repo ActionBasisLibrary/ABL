@@ -26,7 +26,7 @@ class ABSymSingle : public ABSymbol {
 public:
     ABSymSingle(string name, unsigned int card);
     
-    void setValues(float *someVals);
+    void setValues(double *someVals);
 };
 
 /*
@@ -34,9 +34,9 @@ public:
  */
 class ABSymPull : public ABSymbol {
 private:
-    bool (*pullFunc)(float *ptr);
+    bool (*pullFunc)(double *ptr);
 public:
-    ABSymPull(string name, unsigned int card, bool(*fnPtr)(float *ptr));
+    ABSymPull(string name, unsigned int card, bool(*fnPtr)(double *ptr));
     
     virtual DataState update();
 };
