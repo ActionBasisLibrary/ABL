@@ -7,9 +7,8 @@
 //
 
 #include <iostream>
+#include <time.h>
 #include "ABL.h"
-#include "ABTransform.h"
-#include "ABSymbolSubclasses.h"
 
 void ABL::test(){
 	printf("ABL is linked.\n");
@@ -51,6 +50,12 @@ void ABL::testSymbols()
     
     delete syms[0];
     delete syms[1];
+}
+
+bool pullTime(float *buff)
+{
+    *buff = clock();
+    return true;
 }
 
 void ABL::testTransform()
@@ -98,4 +103,16 @@ void ABL::testTransform()
     const float *vals3 = transform.getValue("composite");
     printf("Vals: %f %f %f\n", vals3[0], vals3[1], vals3[2]);
     cout << comp->toString() << endl;
+    
+    transform.deleteSymbols();
+    
+    printf("Starting input test.\n");
+    
+    ABSymPull *timeSym = new ABSymPull("time", 1, pullTime);
+    ABSymMean *timeMean = new ABSymMean("timeMean", "time");
+    transform.addSymbol(timeSym);
+    transform.addSymbol(timeMean);
+    
+//    for (int i = 0; i < 1000; i++)
+//        printf("TimeMean: %f\n", transform.getValue("timeMean")[0]);
 }

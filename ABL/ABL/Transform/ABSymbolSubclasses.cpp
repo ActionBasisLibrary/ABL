@@ -22,6 +22,24 @@ void ABSymSingle::setValues(float *someVals)
     dataState = DIRTY;
 }
 
+ABSymPull::ABSymPull(string name, unsigned int card, bool(*fnPtr)(float *ptr))
+: ABSymbol(name, card), pullFunc(fnPtr)
+{
+    dataState = DIRTY;
+}
+
+ABSymbol::DataState ABSymPull::update()
+{
+    float buff[getCard()];
+    if (pullFunc(buff)) {
+        memcpy(vals, buff, getCard() * sizeof(float));
+        dataState = CLEAN;
+        return DIRTY;
+    } else {
+        return CLEAN;
+    }
+}
+
 #pragma mark DERIVED
 
 ABSymMean::ABSymMean(string name, vector<string> &inputs)

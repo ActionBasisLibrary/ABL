@@ -23,6 +23,9 @@ void ABTransform::deleteSymbols()
 {
     for (size_t i = 0; i < symbols.size(); i++)
         delete symbols[i];
+    symbols.clear();
+    symMap.clear();
+    numSyms = 0;
 }
 
 // Methods to get values

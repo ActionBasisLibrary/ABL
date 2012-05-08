@@ -23,6 +23,18 @@ public:
     void setValues(float *someVals);
 };
 
+/*
+ * Symbol class for pulling input data
+ */
+class ABSymPull : public ABSymbol {
+private:
+    bool (*pullFunc)(float *ptr);
+public:
+    ABSymPull(string name, unsigned int card, bool(*fnPtr)(float *ptr));
+    
+    virtual DataState update();
+};
+
 #pragma mark DERIVED VALUE SYMBOLS
 
 /*

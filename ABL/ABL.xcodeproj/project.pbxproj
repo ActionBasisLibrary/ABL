@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; };
+		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */; };
 		12856A5B1553353E00953855 /* ABTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A591553353E00953855 /* ABTransform.cpp */; };
-		12856A5C1553353E00953855 /* ABTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A5A1553353E00953855 /* ABTransform.h */; };
+		12856A5C1553353E00953855 /* ABTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A5A1553353E00953855 /* ABTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12856A66155336D800953855 /* ABSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A64155336D800953855 /* ABSymbol.cpp */; };
-		12856A67155336D800953855 /* ABSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A65155336D800953855 /* ABSymbol.h */; };
+		12856A67155336D800953855 /* ABSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A65155336D800953855 /* ABSymbol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C90029161547C8820044B6AD /* ABL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL.cpp */; };
 		C90029171547C92F0044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */

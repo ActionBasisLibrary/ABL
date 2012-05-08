@@ -9,10 +9,13 @@
 #ifndef ABL_h
 #define ABL_h
 
+#include "ABTransform.h"
+#include "ABSymbol.h"
+#include "ABSymbolSubclasses.h"
+
 class ABL {
 public:
 	static void test();
-    
     
 private:
     static void testSymbols();
