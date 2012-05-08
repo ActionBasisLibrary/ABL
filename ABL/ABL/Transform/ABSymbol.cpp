@@ -10,8 +10,19 @@
 
 ABSymbol::ABSymbol(string name, unsigned int card, vector<string> &inputs)
 : name(name), card(card), inputNames(inputs), numInputs(inputs.size()),
-vals(new float[card]), updated(false)
+vals(new float[card]), dataState(CLEAN)
 {
+    inputSyms = new ABSymbol* [numInputs];
+    for (size_t i = 0; i < numInputs; i++)
+        inputSyms[i] = NULL;
+}
+
+ABSymbol::ABSymbol(string name, unsigned int card, string input)
+: name(name), card(card), numInputs(1),
+vals(new float[card]), dataState(CLEAN)
+{    
+    inputNames.push_back(input);
+    
     inputSyms = new ABSymbol* [numInputs];
     for (size_t i = 0; i < numInputs; i++)
         inputSyms[i] = NULL;
@@ -19,7 +30,7 @@ vals(new float[card]), updated(false)
 
 ABSymbol::ABSymbol(string name, unsigned int card)
 : name(name), card(card), inputNames(), numInputs(0),
-vals(new float[card]), updated(false)
+vals(new float[card]), dataState(CLEAN)
 {
     inputSyms = NULL;
 }
@@ -30,48 +41,37 @@ ABSymbol::~ABSymbol()
     if (inputSyms) delete[] inputSyms;
 }
 
-bool ABSymbol::update()
+ABSymbol::DataState ABSymbol::update()
 {
-    if (good()) return true;
+    DataState treeState = dataState;
     
-    else {
-        for (size_t i = 0; i < numInputs; i++) {
-            if (inputSyms[i]) inputSyms[i]->update();
-            else return false;
-        }
-    }
+    for (size_t i = 0; i < numInputs; i++)
+        if (inputSyms[i])
+            treeState = inputSyms[i]->update() && treeState;
     
-    return true;
+    dataState = CLEAN;
+    return treeState;
 }
 
-bool ABSymbol::good()
+bool ABSymbol::getTreeClean()
 {
-    if (!updated) return false;
+    if (dataState == DIRTY) return DIRTY;
     
     for (size_t i = 0; i < numInputs; i++) {
-        if (!inputSyms[i] || !inputSyms[i]->good())
-            return false;
+        if (!inputSyms[i] || !inputSyms[i]->getTreeClean())
+            return DIRTY;
     }
     
-    return true;
+    return CLEAN;
 }
 
-const float *ABSymbol::getValues()
+string ABSymbol::toString()
 {
-    if (update()) return vals;
-    
-    return NULL;
-}
-
-#pragma SUBCLASSES
-
-ABSymSingle::ABSymSingle(string name, unsigned int card)
-: ABSymbol(name, card)
-{
-    updated = true;
-}
-
-void ABSymSingle::setValues(float *someVals)
-{
-    memcpy(vals, someVals, card * sizeof(float));
+    string result = name + ":";
+    char buffer[20];
+    for (unsigned int i = 0; i < getCard(); i++) {
+        sprintf(buffer, " %f", vals[i]);
+        result += buffer;
+    }
+    return result;
 }

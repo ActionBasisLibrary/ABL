@@ -11,6 +11,7 @@
 
 #include <vector>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -20,44 +21,59 @@ using namespace std;
  * Input value locations and updates output values with custom pointer
  */
 class ABSymbol {
-public:
-    const unsigned int card, numInputs;
-    
 protected:
     float *vals;
     ABSymbol **inputSyms;
-    bool updated;
+    
+    /*
+     * Boolean definitions for update function
+     */
+    typedef bool DataState;
+    static const DataState CLEAN = true;
+    static const DataState DIRTY = false;
+    
+    DataState dataState;
     
 private:
     const string name;
-    const vector<string> inputNames;
+    vector<string> inputNames;
+    const unsigned int card, numInputs;
     
 public:
     ABSymbol(string name, unsigned int card, vector<string> &inputs);
+    ABSymbol(string name, unsigned int card, string input);
     ABSymbol(string name, unsigned int card);
     ~ABSymbol();
     
     /*
      * Virtual method to be subclassed into functionality
      */
-    virtual bool update();
-    virtual bool good();
+    virtual DataState update();
+    
+    /*
+     * Special method for setting symbol pointers
+     */
+    inline void linkSymbol(unsigned int i, ABSymbol *ptr) { inputSyms[i] = ptr; }
     
     /*
      * Methods for access the values and setting dependencies
      */
-    const float *getValues();
-    inline float at(unsigned int i) { return vals[i]; }
-    inline void linkSym(unsigned int i, ABSymbol *ptr) { inputSyms[i] = ptr; }
-    inline const string &getName() { return name; }
-    inline const string &getSym(unsigned int i) { return inputNames[i]; }
-};
-
-class ABSymSingle : public ABSymbol {
-public:
-    ABSymSingle(string name, unsigned int card);
+    inline const float *getValues() { return vals; }
+    inline float getValue(unsigned int i) { return vals[i]; }
     
-    void setValues(float *someVals);
+    inline const string &getName() { return name; }
+    
+    inline const string &getSymbolName(unsigned int i) { return inputNames[i]; }
+    
+    inline unsigned int getCard() { return card; }
+    inline unsigned int getNumInputs() { return numInputs; }
+    
+    string toString();
+    
+protected:
+    
+    bool getTreeClean();
+    bool shouldUpdate();
 };
 
 #endif

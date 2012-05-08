@@ -44,7 +44,8 @@ public:
     
     // Methods to modify symbol tree
     
-    void addSymbol(string name, ABSymbol *sym);
+    void addSymbol(ABSymbol *sym);
+    void addSymbols(ABSymbol **sym, int num);
     
 private:
     // Private methods

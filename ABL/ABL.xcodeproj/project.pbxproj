@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; };
+		124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */; };
 		12856A5B1553353E00953855 /* ABTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A591553353E00953855 /* ABTransform.cpp */; };
 		12856A5C1553353E00953855 /* ABTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A5A1553353E00953855 /* ABTransform.h */; };
 		12856A66155336D800953855 /* ABSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A64155336D800953855 /* ABSymbol.cpp */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymbolSubclasses.h; sourceTree = "<group>"; };
+		124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbolSubclasses.cpp; sourceTree = "<group>"; };
 		12856A591553353E00953855 /* ABTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABTransform.cpp; sourceTree = "<group>"; };
 		12856A5A1553353E00953855 /* ABTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTransform.h; sourceTree = "<group>"; };
 		12856A64155336D800953855 /* ABSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbol.cpp; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 				12856A5A1553353E00953855 /* ABTransform.h */,
 				12856A64155336D800953855 /* ABSymbol.cpp */,
 				12856A65155336D800953855 /* ABSymbol.h */,
+				124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */,
+				124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */,
 			);
 			path = Transform;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 				C90029171547C92F0044B6AD /* ABL.h in Headers */,
 				12856A5C1553353E00953855 /* ABTransform.h in Headers */,
 				12856A67155336D800953855 /* ABSymbol.h in Headers */,
+				124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 				C90029161547C8820044B6AD /* ABL.cpp in Sources */,
 				12856A5B1553353E00953855 /* ABTransform.cpp in Sources */,
 				12856A66155336D800953855 /* ABSymbol.cpp in Sources */,
+				124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
