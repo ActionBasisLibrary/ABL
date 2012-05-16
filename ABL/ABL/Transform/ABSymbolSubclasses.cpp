@@ -40,6 +40,30 @@ ABSymbol::DataState ABSymPull::update()
     }
 }
 
+ABSymVarPull::ABSymVarPull(string name, unsigned int maxCard, bool(*fnPtr)(float *ptr, unsigned int *card))
+: ABSymbol(name, maxCard), pullFunc(fnPtr)
+{
+    dataState = DIRTY;
+}
+
+ABSymbol::DataState ABSymVarPull::update()
+{
+    float buff[ABSymbol::getCard()];
+    if (pullFunc(buff, &currentCard)) {
+        memcpy(vals, buff, currentCard * sizeof(float));
+        dataState = CLEAN;
+        return DIRTY;
+    } else {
+        return CLEAN;
+    }
+}
+
+unsigned int ABSymVarPull::getCard()
+{
+	return currentCard;
+}
+
+
 #pragma mark DERIVED
 
 ABSymMean::ABSymMean(string name, vector<string> &inputs)
@@ -67,6 +91,7 @@ ABSymMean::DataState ABSymMean::update()
         for (unsigned int j = 0; j < inputSyms[i]->getCard(); j++)
             vals[i] += inVals[j];
         vals[i] /= inputSyms[i]->getCard();
+		printf("inputSyms[i]->getCard() == %i\n", inputSyms[i]->getCard());
     }
     
     // Make sure parents update

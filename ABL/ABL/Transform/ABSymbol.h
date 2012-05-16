@@ -65,7 +65,7 @@ public:
     
     inline const string &getSymbolName(unsigned int i) { return inputNames[i]; }
     
-    inline unsigned int getCard() { return card; }
+    inline virtual unsigned int getCard() { return card; }
     inline unsigned int getNumInputs() { return numInputs; }
     
     string toString();
