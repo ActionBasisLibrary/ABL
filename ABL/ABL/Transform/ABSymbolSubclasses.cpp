@@ -91,7 +91,6 @@ ABSymMean::DataState ABSymMean::update()
         for (unsigned int j = 0; j < inputSyms[i]->getCard(); j++)
             vals[i] += inVals[j];
         vals[i] /= inputSyms[i]->getCard();
-		printf("inputSyms[i]->getCard() == %i\n", inputSyms[i]->getCard());
     }
     
     // Make sure parents update
