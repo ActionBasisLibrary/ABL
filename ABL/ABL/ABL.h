@@ -12,6 +12,7 @@
 #include "ABTransform.h"
 #include "ABSymbol.h"
 #include "ABSymbolSubclasses.h"
+#include "GTimer.h"
 
 class ABL {
 public:

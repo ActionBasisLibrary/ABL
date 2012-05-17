@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1223D4B31559E052005C3D7F /* GTimer.cpp */; };
-		1223D4B61559E052005C3D7F /* GTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1223D4B41559E052005C3D7F /* GTimer.h */; };
+		1223D4B61559E052005C3D7F /* GTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1223D4B41559E052005C3D7F /* GTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */; };
 		12856A5B1553353E00953855 /* ABTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A591553353E00953855 /* ABTransform.cpp */; };

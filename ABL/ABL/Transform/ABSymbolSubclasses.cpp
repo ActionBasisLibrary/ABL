@@ -40,6 +40,27 @@ ABSymbol::DataState ABSymPull::update()
     }
 }
 
+#pragma mark TIME-BASED
+
+ABSymTick::ABSymTick(string name, GTimer *atimer, double refreshTime, double resetTime)
+: ABSymbol(name, 3), timer(atimer), refresh(refreshTime), reset(resetTime)
+{
+    lastTick = timer->getTime();
+    dataState = CLEAN;
+}
+
+ABSymbol::DataState ABSymTick::update()
+{
+    double t = timer->getTime();
+    if (t - vals[0] >= refresh) {
+        double dt = t - vals[0];
+        lastTick = t;
+        return DIRTY;
+    } else {
+        return CLEAN;
+    }
+}
+
 #pragma mark DERIVED
 
 ABSymMean::ABSymMean(string name, vector<string> &inputs)

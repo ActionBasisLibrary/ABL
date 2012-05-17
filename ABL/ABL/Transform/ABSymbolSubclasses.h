@@ -10,12 +10,23 @@
 #define ABL_ABSymbolSubclasses_h
 
 #include "ABSymbol.h"
+#include "GTimer.h"
 
 #pragma mark SUPER CLASS SYMBOLS
 
 /*
  * Symbol designed to automatically update over time
  */
+class ABSymTick : public ABSymbol {
+private:
+    double lastTick, refresh, reset;
+    GTimer *timer;
+    
+public:
+    ABSymTick(string name, GTimer *atimer, double refreshTime, double resetTime);
+    
+    virtual DataState update();
+};
 
 #pragma mark LIGHTWEIGHT SYMBOLS
 

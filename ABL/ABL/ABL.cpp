@@ -7,8 +7,9 @@
 //
 
 #include <iostream>
-#include <time.h>
 #include "ABL.h"
+
+GTimer timer;
 
 void ABL::test(){
 	printf("ABL is linked.\n");
@@ -54,7 +55,7 @@ void ABL::testSymbols()
 
 bool pullTime(double *buff)
 {
-    *buff = clock();
+    *buff = timer.getTime();
     return true;
 }
 
@@ -113,6 +114,6 @@ void ABL::testTransform()
     transform.addSymbol(timeSym);
     transform.addSymbol(timeMean);
     
-//    for (int i = 0; i < 1000; i++)
-//        printf("TimeMean: %f\n", transform.getValue("timeMean")[0]);
+    for (int i = 0; i < 1000; i++)
+        printf("TimeMean: %f\n", transform.getValue("timeMean")[0]);
 }
