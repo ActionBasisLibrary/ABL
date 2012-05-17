@@ -52,6 +52,22 @@ public:
     virtual DataState update();
 };
 
+/*
+ * Symbol class for pulling a variable amount of input data
+ */
+class ABSymVarPull : public ABSymbol {
+private:
+    bool (*pullFunc)(float *ptr, unsigned int *card);
+	unsigned int currentCard;
+public:
+    ABSymVarPull(string name, unsigned int maxCard, bool(*fnPtr)(float *ptr, unsigned int *card));
+    
+    unsigned int getCard();
+    
+    virtual DataState update();
+};
+
+
 #pragma mark DERIVED VALUE SYMBOLS
 
 /*

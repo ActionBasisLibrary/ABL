@@ -61,6 +61,30 @@ ABSymbol::DataState ABSymTick::update()
     }
 }
 
+ABSymVarPull::ABSymVarPull(string name, unsigned int maxCard, bool(*fnPtr)(float *ptr, unsigned int *card))
+: ABSymbol(name, maxCard), pullFunc(fnPtr)
+{
+    dataState = DIRTY;
+}
+
+ABSymbol::DataState ABSymVarPull::update()
+{
+    float buff[ABSymbol::getCard()];
+    if (pullFunc(buff, &currentCard)) {
+        memcpy(vals, buff, currentCard * sizeof(float));
+        dataState = CLEAN;
+        return DIRTY;
+    } else {
+        return CLEAN;
+    }
+}
+
+unsigned int ABSymVarPull::getCard()
+{
+	return currentCard;
+}
+
+
 #pragma mark DERIVED
 
 ABSymMean::ABSymMean(string name, vector<string> &inputs)
