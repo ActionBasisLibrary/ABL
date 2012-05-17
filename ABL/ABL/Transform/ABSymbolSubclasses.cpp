@@ -42,14 +42,14 @@ ABSymbol::DataState ABSymPull::update()
 
 #pragma mark TIME-BASED
 
-ABSymTick::ABSymTick(string name, GTimer *atimer, double refreshTime, double resetTime)
+ABSymTime::ABSymTime(string name, GTimer *atimer, double refreshTime, double resetTime)
 : ABSymbol(name, 3), timer(atimer), refresh(refreshTime), reset(resetTime)
 {
     lastTick = timer->getTime();
-    dataState = CLEAN;
+    dataState = DIRTY;
 }
 
-ABSymbol::DataState ABSymTick::update()
+ABSymbol::DataState ABSymTime::update()
 {
     double t = timer->getTime();
     if (t - vals[0] >= refresh) {

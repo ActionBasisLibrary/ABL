@@ -41,3 +41,10 @@ double GTimer::absTime()
 {
 	return mach_absolute_time() * scale;
 }
+
+timeval GTimer::getSysTime()
+{
+    timeval tod;
+    gettimeofday(&tod, NULL);
+    return tod;
+}

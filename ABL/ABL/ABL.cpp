@@ -13,8 +13,29 @@ GTimer timer;
 
 void ABL::test(){
 	printf("ABL is linked.\n");
+    
+    testTimerThread();
     //testSymbols();
-    testTransform();
+    //testTransform();
+}
+
+void message(void *vmsg)
+{
+    char *msg = (char*)vmsg;
+    printf("Message: %s\n", msg);
+}
+
+void ABL::testTimerThread()
+{
+    printf("Starting thread test\n");
+    GTimerThread ttimer;
+    
+    ttimer.tickms(message, (char*)"First", 2000);
+    ttimer.tickms(message, (char*)"Second", 6000);
+    ttimer.tickms(message, (char*)"Third", 4000);
+
+    sleep(8);
+    printf("Enqueued @ %f.\n", ttimer.getTime());
 }
 
 void ABL::testSymbols()

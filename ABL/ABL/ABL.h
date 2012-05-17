@@ -13,12 +13,14 @@
 #include "ABSymbol.h"
 #include "ABSymbolSubclasses.h"
 #include "GTimer.h"
+#include "GTimerThread.h"
 
 class ABL {
 public:
 	static void test();
     
 private:
+    static void testTimerThread();
     static void testSymbols();
     static void testTransform();
 };

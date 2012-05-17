@@ -11,6 +11,7 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <sys/time.h>
 
 class GTimer {
 public:
@@ -21,6 +22,9 @@ public:
 	double getTime();
 	void resetTime();
 	double absTime();
+    
+    timeval getSysTime();
+    
 private:
 	double scale, lastTime, firstTime;
 };
