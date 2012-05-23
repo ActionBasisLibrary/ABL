@@ -11,18 +11,48 @@
 
 GTimer timer;
 
-void ABL::test(){
-	printf("ABL is linked.\n");
-    
-    testTimerThread();
-    //testSymbols();
-    //testTransform();
+void ABL::test(){    
+//    testCache();
+//    testTimerThread();
+//    testSymbols();
+//    testTransform();
+    testCalculusSymbols();
 }
 
 void message(void *vmsg)
 {
     char *msg = (char*)vmsg;
     printf("Message: %s\n", msg);
+}
+
+void ABL::testCache()
+{
+    int card = 50;
+    GCacheQueue q(card, 0);
+    
+    cout << q.toString() << endl;
+    
+    for (int i = 1; i <= card; i++)
+        q.shift(i);
+    
+    cout << q.toString() << endl;
+    
+    q.shift(card+1);
+    q.shift(card+2);
+    cout << q.toString() << endl;
+    
+    double vals[card];
+    q.getValues(vals);
+    
+    for (int i = 0; i < card; i++)
+        cout << vals[i] << " ";
+    cout << endl;
+    
+    q.getOrderedValues(vals);
+    
+    for (int i = 0; i < card; i++)
+        cout << vals[i] << " ";
+    cout << endl;
 }
 
 void ABL::testTimerThread()
@@ -38,40 +68,84 @@ void ABL::testTimerThread()
     printf("Enqueued @ %f.\n", ttimer.getTime());
 }
 
+void printSymTime(void *vsym)
+{
+    cout << "Printing" << endl;
+    
+    ABSymTime *sym = (ABSymTime *)vsym;
+    
+    sym->recalculate();
+    
+    cout << sym->toString() << endl;
+}
+
 void ABL::testSymbols()
 {
-    printf("Testing symbols.\n");
+    cout << "Testing symbols." << endl;
     
-    ABSymbol *syms[3];
-    syms[0] = new ABSymSingle("numbers", 6);
-    double nums[6] = {0, 1, 2, 3, 4, 5};
-    ((ABSymSingle*)syms[0])->setValues(nums);
+    {
     
-    vector<string> inputs;
-    inputs.push_back("numbers");
-    syms[1] = new ABSymMean("numbersMean", inputs);
-    syms[1]->linkSymbol(0, syms[0]);
-    
-    printf("Just linked, no update.\n");
-    cout << syms[0]->toString() << endl;
-    cout << syms[1]->toString() << endl;
+        ABSymbol *syms[3];
+        double nums[6] = {0, 1, 2, 3, 4, 5};
+        syms[0] = new ABSymSet("numbers", 6, nums);
+        
+        vector<string> inputs;
+        inputs.push_back("numbers");
+        syms[1] = new ABSymMean("numbersMean", inputs);
+        syms[1]->linkSymbol(0, syms[0]);
+        
+        printf("Just linked, no update: should be 0-5 and 0.\n");
+        cout << syms[0]->toString() << endl;
+        cout << syms[1]->toString() << endl;
 
-    printf("Updating mean.\n");
-    syms[1]->update();
-    cout << syms[1]->toString() << endl;
+        printf("Updating mean: should be 0-5 and 2.5\n");
+        syms[1]->update();
+        cout << syms[1]->toString() << endl;
+        
+        printf("Changing numbers, no update: should be 6,1-5 and 2.5\n");
+        nums[0] = 6;
+        cout << syms[0]->toString() << endl;
+        cout << syms[1]->toString() << endl;
+        
+        printf("Updating mean: should be 6,1-5 and 3.5\n");
+        syms[1]->update();
+        cout << syms[1]->toString() << endl;
+        
+        delete syms[0];
+        delete syms[1];
+        
+    }
     
-    printf("Updating numbers.\n");
-    nums[0] = 6;
-    ((ABSymSingle*)syms[0])->setValues(nums);
-    cout << syms[0]->toString() << endl;
-    cout << syms[1]->toString() << endl;
+    printf("Clearing and starting tick sym test (2 is smooth)\n");
     
-    printf("Updating mean.\n");
-    syms[1]->update();
-    cout << syms[1]->toString() << endl;
-    
-    delete syms[0];
-    delete syms[1];
+    {
+        
+        GTimerThread ttimer;
+        
+        string names[] = {"time1", "time2"};
+        vector<string> vect(names,names+2);
+        
+        ABSymbol *syms[3];
+        syms[0] = new ABSymTime("time1", &timer, 0);
+        syms[1] = new ABSymTime("time2", &timer, 40);
+        syms[2] = new ABSymTick("tick", vect, &ttimer, .1);
+        
+        syms[2]->linkSymbol(0, syms[0]);
+        syms[2]->linkSymbol(1, syms[1]);
+        
+        ((ABSymTick*)syms[2])->start();
+        for (int i = 0; i < 8; i++) {
+            cout << syms[0]->toString() << endl;
+            cout << syms[1]->toString() << endl;
+            sleep(1);
+        }
+        
+        cout << "deleting symbols..." << endl;
+        delete syms[0];
+        delete syms[1];
+        delete syms[2];
+        cout << "Done!" << endl;
+    }
 }
 
 bool pullTime(double *buff)
@@ -84,57 +158,113 @@ void ABL::testTransform()
 {
     ABTransform transform(true);
     
-    ABSymbol *pos[3] = {
-        new ABSymSingle("pos0", 6),
-        new ABSymSingle("pos1", 4),
-        new ABSymSingle("pos2", 10)
-    };
-    
-    ABSymbol *mean[3] = {
-        new ABSymMean("mean0", "pos0"),
-        new ABSymMean("mean1", "pos1"),
-        new ABSymMean("mean2", "pos2")
-    };
-    
-    string names[] = {"mean0", "mean1", "mean2"};
-    vector<string> compInputs(names,names+3);
-    ABSymbol *comp = new ABSymCombine("composite", compInputs);
-    
-    transform.addSymbols(pos, 2);
-    transform.addSymbols(mean, 3);
-    transform.addSymbol(comp);
-    
-    double pos0[] = {0, 1, 2, 3, 4, 5};
-    double pos1[] = {0, 1, 2, 3};
-    double pos2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    {
+        double pos0[] = {0, 1, 2, 3, 4, 5};
+        double pos1[] = {0, 1, 2, 3};
+        double pos2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        
+        ABSymbol *pos[3] = {
+            new ABSymSet("pos0", 6, pos0),
+            new ABSymSet("pos1", 4, pos1),
+            new ABSymSet("pos2", 10, pos2)
+        };
+        
+        ABSymbol *mean[3] = {
+            new ABSymMean("mean0", "pos0"),
+            new ABSymMean("mean1", "pos1"),
+            new ABSymMean("mean2", "pos2")
+        };
+        
+        string names[] = {"mean0", "mean1", "mean2"};
+        vector<string> compInputs(names,names+3);
+        ABSymbol *comp = new ABSymCombine("composite", compInputs);
+        
+        transform.addSymbols(pos, 2);
+        transform.addSymbols(mean, 3);
+        transform.addSymbol(comp);
+        
+        cout << "Added SymSet 1,2, three means, comp. No link. Should be 0, 0, 0." << endl;
+        cout << "Comp: " << comp->toString() << endl;
 
-    const double *vals = transform.getValue("composite");
-    printf("Vals: %f %f %f\n", vals[0], vals[1], vals[2]);
-    cout << comp->toString() << endl;
+        cout << "Now linking and updating, should be 2.5, 1.5, 0. (in both)" << endl;
+        double vals[comp->getCard()];
+        transform.getValues("composite", vals);
+        printf("Vals1: %f %f %f\n", vals[0], vals[1], vals[2]);
+        cout << "Comp: " << comp->toString() << endl;
+        
+        transform.addSymbol(pos[2]);
+        
+        cout << "Added third symbol, no linking. Should be same." << endl;
+        cout << "Comp: " << comp->toString() << endl;
+        
+        cout << "Now linking. Should be 2.5, 1.5, 4.5." << endl;
+        transform.getValues("composite", vals);
+        printf("Vals3: %f %f %f\n", vals[0], vals[1], vals[2]);
+        
+        transform.deleteSymbols();
+    }
     
-    ((ABSymSingle*)pos[0])->setValues(pos0);
-    ((ABSymSingle*)pos[1])->setValues(pos1);
-    ((ABSymSingle*)pos[2])->setValues(pos2);
+    printf("Clearing and starting input test.\n");
     
-    const double *vals2 = transform.getValue("composite");
-    printf("Vals: %f %f %f\n", vals2[0], vals2[1], vals2[2]);
-    cout << comp->toString() << endl;
+    {
+        string names[] = {"timepull", "time"};
+        vector<string> compInputs(names, names+2);
+        
+        ABSymPull *timePull = new ABSymPull("timepull", 1, pullTime);
+        ABSymTime *timeTime = new ABSymTime("time", &timer, 2);
+        ABSymbol *comp = new ABSymCombine("timeComp", compInputs);
+        transform.addSymbol(timePull);
+        transform.addSymbol(timeTime);
+        transform.addSymbol(comp);
+        
+        for (int i = 0; i < 8; i++) {
+            double tvals[2];
+            transform.getValues("timeComp", tvals);
+            
+            printf("TimePull: %f, TimeReg: %f\n", tvals[0], tvals[1]);
+            sleep(1);
+        }
+        
+        transform.deleteSymbols();
+    }
+}
+
+static bool xFn(double *buf)
+{
+    buf[0] = timer.getTime() * 4.0;
+    return true;
+}
+
+void ABL::testCalculusSymbols()
+{
+    GTimerThread ttimer;
     
-    transform.addSymbol(pos[2]);
+    string names[] = { "x", "dx", "time" };
     
-    const double *vals3 = transform.getValue("composite");
-    printf("Vals: %f %f %f\n", vals3[0], vals3[1], vals3[2]);
-    cout << comp->toString() << endl;
+    ABSymPull *pull = new ABSymPull("x", 1, xFn);
+    ABSymTime *time = new ABSymTime("time", &timer, 0);
     
-    transform.deleteSymbols();
+    vector<string> vect(names, names+1);
+    ABSymDifferentiate *diff = new ABSymDifferentiate("dx", vect, "time");
     
-    printf("Starting input test.\n");
+    vect = vector<string>(names+1,names+2);
+    ABSymTick *tick = new ABSymTick("tick", vect, &ttimer, .01);
     
-    ABSymPull *timeSym = new ABSymPull("time", 1, pullTime);
-    ABSymMean *timeMean = new ABSymMean("timeMean", "time");
-    transform.addSymbol(timeSym);
-    transform.addSymbol(timeMean);
+    ABTransform transform(true);
+    transform.addSymbol(pull);
+    transform.addSymbol(time);
+    transform.addSymbol(diff);
+    transform.addSymbol(tick);
     
-    for (int i = 0; i < 1000; i++)
-        printf("TimeMean: %f\n", transform.getValue("timeMean")[0]);
+    transform.startTick("tick");
+    for (int i = 0; i < 10; i++) {
+        double x, d, t[3];
+        transform.getValues("x", &x);
+        transform.getValues("dx", &d);
+        transform.getValues("time", t);
+        cout << "t  = " << t[0] << endl;
+        cout << "x  = " << x << endl;
+        cout << "dx = " << d << endl << endl;;
+        sleep(1);
+    }
 }

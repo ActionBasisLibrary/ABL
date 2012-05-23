@@ -9,16 +9,33 @@
 /* Begin PBXBuildFile section */
 		1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1223D4B31559E052005C3D7F /* GTimer.cpp */; };
 		1223D4B61559E052005C3D7F /* GTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1223D4B41559E052005C3D7F /* GTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */; };
-		127BA80A156578C800352F21 /* ABSymbolsContinuous.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA809156578C800352F21 /* ABSymbolsContinuous.cpp */; };
-		127BA80D156578D400352F21 /* ABSymbolsContinuous.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA80C156578D400352F21 /* ABSymbolsContinuous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127BA80F15657F7000352F21 /* GTimerThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA80E15657F7000352F21 /* GTimerThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127BA8111565823800352F21 /* GTimerThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA8101565823800352F21 /* GTimerThread.cpp */; };
+		127BA81C1565B45400352F21 /* ABSymVarPull.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA81B1565B45400352F21 /* ABSymVarPull.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127BA81E1565B46C00352F21 /* ABSymVarPull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA81D1565B46C00352F21 /* ABSymVarPull.cpp */; };
+		127BA8201565B6A600352F21 /* ABSymPull.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA81F1565B6A600352F21 /* ABSymPull.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127BA8221565B6D400352F21 /* ABSymPull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA8211565B6D400352F21 /* ABSymPull.cpp */; };
+		127BA8241565B73C00352F21 /* ABSymTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA8231565B73C00352F21 /* ABSymTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127BA8261565B7EC00352F21 /* ABSymTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA8251565B7EB00352F21 /* ABSymTime.cpp */; };
+		127BA8281565B8FD00352F21 /* GCacheQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA8271565B8FD00352F21 /* GCacheQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127BA82A1565BAB000352F21 /* GCacheQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 127BA8291565BAB000352F21 /* GCacheQueue.cpp */; };
 		12856A5B1553353E00953855 /* ABTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A591553353E00953855 /* ABTransform.cpp */; };
 		12856A5C1553353E00953855 /* ABTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A5A1553353E00953855 /* ABTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12856A66155336D800953855 /* ABSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A64155336D800953855 /* ABSymbol.cpp */; };
 		12856A67155336D800953855 /* ABSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A65155336D800953855 /* ABSymbol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CEB4156A15FE00991BD5 /* ABSymMean.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CEB3156A15FE00991BD5 /* ABSymMean.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CEB7156A161B00991BD5 /* ABSymMean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CEB6156A161A00991BD5 /* ABSymMean.cpp */; };
+		12A8CEBE156A184A00991BD5 /* ABSymCombine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CEBC156A184900991BD5 /* ABSymCombine.cpp */; };
+		12A8CEBF156A184A00991BD5 /* ABSymCombine.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CEBD156A184A00991BD5 /* ABSymCombine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CEC7156A24E200991BD5 /* ABSymSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CEC5156A24E200991BD5 /* ABSymSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CECA156B075400991BD5 /* ABSymTick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CEC8156B075200991BD5 /* ABSymTick.cpp */; };
+		12A8CECB156B075400991BD5 /* ABSymTick.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CEC9156B075300991BD5 /* ABSymTick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CECE156B206A00991BD5 /* ABSymDifferentiate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CECC156B206800991BD5 /* ABSymDifferentiate.cpp */; };
+		12A8CECF156B206A00991BD5 /* ABSymDifferentiate.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CECD156B206900991BD5 /* ABSymDifferentiate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12A8CED2156CC86500991BD5 /* ABSymCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */; };
+		12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CED1156CC85900991BD5 /* ABSymCurve.h */; };
+		12A8CED6156CC89C00991BD5 /* ABSymContinuous.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CED4156CC89B00991BD5 /* ABSymContinuous.cpp */; };
+		12A8CED7156CC89C00991BD5 /* ABSymContinuous.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */; };
 		C90029161547C8820044B6AD /* ABL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL.cpp */; };
 		C90029171547C92F0044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -26,16 +43,33 @@
 /* Begin PBXFileReference section */
 		1223D4B31559E052005C3D7F /* GTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GTimer.cpp; sourceTree = "<group>"; };
 		1223D4B41559E052005C3D7F /* GTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimer.h; sourceTree = "<group>"; };
-		124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABSymbolSubclasses.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABSymbolSubclasses.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		127BA809156578C800352F21 /* ABSymbolsContinuous.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymbolsContinuous.cpp; sourceTree = "<group>"; };
-		127BA80C156578D400352F21 /* ABSymbolsContinuous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymbolsContinuous.h; sourceTree = "<group>"; };
 		127BA80E15657F7000352F21 /* GTimerThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimerThread.h; sourceTree = "<group>"; };
 		127BA8101565823800352F21 /* GTimerThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GTimerThread.cpp; sourceTree = "<group>"; };
+		127BA81B1565B45400352F21 /* ABSymVarPull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymVarPull.h; sourceTree = "<group>"; };
+		127BA81D1565B46C00352F21 /* ABSymVarPull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymVarPull.cpp; sourceTree = "<group>"; };
+		127BA81F1565B6A600352F21 /* ABSymPull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymPull.h; sourceTree = "<group>"; };
+		127BA8211565B6D400352F21 /* ABSymPull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymPull.cpp; sourceTree = "<group>"; };
+		127BA8231565B73C00352F21 /* ABSymTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymTime.h; sourceTree = "<group>"; };
+		127BA8251565B7EB00352F21 /* ABSymTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymTime.cpp; sourceTree = "<group>"; };
+		127BA8271565B8FD00352F21 /* GCacheQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCacheQueue.h; sourceTree = "<group>"; };
+		127BA8291565BAB000352F21 /* GCacheQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCacheQueue.cpp; sourceTree = "<group>"; };
 		12856A591553353E00953855 /* ABTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABTransform.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		12856A5A1553353E00953855 /* ABTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABTransform.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		12856A64155336D800953855 /* ABSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABSymbol.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		12856A65155336D800953855 /* ABSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABSymbol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		12A8CEB3156A15FE00991BD5 /* ABSymMean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymMean.h; sourceTree = "<group>"; };
+		12A8CEB6156A161A00991BD5 /* ABSymMean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymMean.cpp; sourceTree = "<group>"; };
+		12A8CEBC156A184900991BD5 /* ABSymCombine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCombine.cpp; sourceTree = "<group>"; };
+		12A8CEBD156A184A00991BD5 /* ABSymCombine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCombine.h; sourceTree = "<group>"; };
+		12A8CEC5156A24E200991BD5 /* ABSymSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymSet.h; sourceTree = "<group>"; };
+		12A8CEC8156B075200991BD5 /* ABSymTick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymTick.cpp; sourceTree = "<group>"; };
+		12A8CEC9156B075300991BD5 /* ABSymTick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymTick.h; sourceTree = "<group>"; };
+		12A8CECC156B206800991BD5 /* ABSymDifferentiate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymDifferentiate.cpp; sourceTree = "<group>"; };
+		12A8CECD156B206900991BD5 /* ABSymDifferentiate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymDifferentiate.h; sourceTree = "<group>"; };
+		12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCurve.cpp; sourceTree = "<group>"; };
+		12A8CED1156CC85900991BD5 /* ABSymCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCurve.h; sourceTree = "<group>"; };
+		12A8CED4156CC89B00991BD5 /* ABSymContinuous.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymContinuous.cpp; sourceTree = "<group>"; };
+		12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymContinuous.h; sourceTree = "<group>"; };
 		C90028B51547AA040044B6AD /* libABL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libABL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
 		C90029131547C85A0044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
@@ -60,21 +94,46 @@
 				1223D4B41559E052005C3D7F /* GTimer.h */,
 				127BA80E15657F7000352F21 /* GTimerThread.h */,
 				127BA8101565823800352F21 /* GTimerThread.cpp */,
+				127BA8271565B8FD00352F21 /* GCacheQueue.h */,
+				127BA8291565BAB000352F21 /* GCacheQueue.cpp */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		127BA8191565B40300352F21 /* Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				127BA81B1565B45400352F21 /* ABSymVarPull.h */,
+				127BA81D1565B46C00352F21 /* ABSymVarPull.cpp */,
+				127BA81F1565B6A600352F21 /* ABSymPull.h */,
+				127BA8211565B6D400352F21 /* ABSymPull.cpp */,
+				12A8CEB3156A15FE00991BD5 /* ABSymMean.h */,
+				12A8CEB6156A161A00991BD5 /* ABSymMean.cpp */,
+				12A8CEBD156A184A00991BD5 /* ABSymCombine.h */,
+				12A8CEBC156A184900991BD5 /* ABSymCombine.cpp */,
+				12A8CEC5156A24E200991BD5 /* ABSymSet.h */,
+				12A8CEC9156B075300991BD5 /* ABSymTick.h */,
+				12A8CEC8156B075200991BD5 /* ABSymTick.cpp */,
+				127BA8231565B73C00352F21 /* ABSymTime.h */,
+				127BA8251565B7EB00352F21 /* ABSymTime.cpp */,
+				12A8CECD156B206900991BD5 /* ABSymDifferentiate.h */,
+				12A8CECC156B206800991BD5 /* ABSymDifferentiate.cpp */,
+				12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */,
+				12A8CED1156CC85900991BD5 /* ABSymCurve.h */,
+			);
+			path = Symbols;
 			sourceTree = "<group>";
 		};
 		12856A571553351C00953855 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
-				12856A591553353E00953855 /* ABTransform.cpp */,
+				127BA8191565B40300352F21 /* Symbols */,
 				12856A5A1553353E00953855 /* ABTransform.h */,
-				12856A64155336D800953855 /* ABSymbol.cpp */,
+				12856A591553353E00953855 /* ABTransform.cpp */,
 				12856A65155336D800953855 /* ABSymbol.h */,
-				124DA9B21558D52E00C9C22B /* ABSymbolSubclasses.cpp */,
-				124DA9B01558D51B00C9C22B /* ABSymbolSubclasses.h */,
-				127BA809156578C800352F21 /* ABSymbolsContinuous.cpp */,
-				127BA80C156578D400352F21 /* ABSymbolsContinuous.h */,
+				12856A64155336D800953855 /* ABSymbol.cpp */,
+				12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */,
+				12A8CED4156CC89B00991BD5 /* ABSymContinuous.cpp */,
 			);
 			path = Transform;
 			sourceTree = "<group>";
@@ -123,12 +182,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C90029171547C92F0044B6AD /* ABL.h in Headers */,
+				1223D4B61559E052005C3D7F /* GTimer.h in Headers */,
+				127BA80F15657F7000352F21 /* GTimerThread.h in Headers */,
+				127BA8281565B8FD00352F21 /* GCacheQueue.h in Headers */,
 				12856A5C1553353E00953855 /* ABTransform.h in Headers */,
 				12856A67155336D800953855 /* ABSymbol.h in Headers */,
-				124DA9B11558D51B00C9C22B /* ABSymbolSubclasses.h in Headers */,
-				127BA80D156578D400352F21 /* ABSymbolsContinuous.h in Headers */,
-				127BA80F15657F7000352F21 /* GTimerThread.h in Headers */,
-				1223D4B61559E052005C3D7F /* GTimer.h in Headers */,
+				127BA8241565B73C00352F21 /* ABSymTime.h in Headers */,
+				127BA8201565B6A600352F21 /* ABSymPull.h in Headers */,
+				127BA81C1565B45400352F21 /* ABSymVarPull.h in Headers */,
+				12A8CEB4156A15FE00991BD5 /* ABSymMean.h in Headers */,
+				12A8CEBF156A184A00991BD5 /* ABSymCombine.h in Headers */,
+				12A8CECB156B075400991BD5 /* ABSymTick.h in Headers */,
+				12A8CEC7156A24E200991BD5 /* ABSymSet.h in Headers */,
+				12A8CECF156B206A00991BD5 /* ABSymDifferentiate.h in Headers */,
+				12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */,
+				12A8CED7156CC89C00991BD5 /* ABSymContinuous.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,10 +254,18 @@
 				C90029161547C8820044B6AD /* ABL.cpp in Sources */,
 				12856A5B1553353E00953855 /* ABTransform.cpp in Sources */,
 				12856A66155336D800953855 /* ABSymbol.cpp in Sources */,
-				124DA9B31558D52E00C9C22B /* ABSymbolSubclasses.cpp in Sources */,
 				1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */,
-				127BA80A156578C800352F21 /* ABSymbolsContinuous.cpp in Sources */,
 				127BA8111565823800352F21 /* GTimerThread.cpp in Sources */,
+				127BA81E1565B46C00352F21 /* ABSymVarPull.cpp in Sources */,
+				127BA8221565B6D400352F21 /* ABSymPull.cpp in Sources */,
+				127BA8261565B7EC00352F21 /* ABSymTime.cpp in Sources */,
+				127BA82A1565BAB000352F21 /* GCacheQueue.cpp in Sources */,
+				12A8CEB7156A161B00991BD5 /* ABSymMean.cpp in Sources */,
+				12A8CEBE156A184A00991BD5 /* ABSymCombine.cpp in Sources */,
+				12A8CECA156B075400991BD5 /* ABSymTick.cpp in Sources */,
+				12A8CECE156B206A00991BD5 /* ABSymDifferentiate.cpp in Sources */,
+				12A8CED2156CC86500991BD5 /* ABSymCurve.cpp in Sources */,
+				12A8CED6156CC89C00991BD5 /* ABSymContinuous.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,7 +43,7 @@ void GTimerThread::tick(void (*afn)(void*), void *data, double delay)
     
     task.time = getSysTime();
     task.time.tv_sec += floor(delay);
-    task.time.tv_usec += fmod(delay, 1.f);
+    task.time.tv_usec += fmod(delay, 1.f)*1e6;
     
     pthread_mutex_lock(&queueLock);
     
@@ -69,7 +69,7 @@ bool GTimerThread::getNextTask(Task *task)
     
     else {
         
-        if (queue.size() < 1) {
+        while (queue.size() < 1) {
             pthread_cond_wait(&wakeFlag, &queueLock);
             
             if (!serveFlag) {
@@ -77,6 +77,8 @@ bool GTimerThread::getNextTask(Task *task)
                 return false;
             }
         }
+        
+        assert(queue.size() > 0);
         
         while (timeValComp(getSysTime(), queue.top().time)) {
             
@@ -105,10 +107,8 @@ void *serveRequests(void *vtimer)
     GTimerThread *timer = (GTimerThread*)vtimer;
     
     GTimerThread::Task nextTask;
-    while (timer->getNextTask(&nextTask)) {
-        printf("Executing task for time @ time %f\n", timer->getTime());
+    while (timer->getNextTask(&nextTask))
         nextTask.fn(nextTask.data);
-    }
     
     return NULL;
 }

@@ -14,6 +14,7 @@
 #include <queue>
 #include <math.h>
 #include <sys/time.h>
+#include <assert.h>
 
 using namespace std;
 

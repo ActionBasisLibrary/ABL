@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		124DA98E1558A82500C9C22B /* libABL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124DA98D1558A82500C9C22B /* libABL.a */; };
+		12A8CEB2156A042600991BD5 /* libABL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028F91547B1AA0044B6AD /* libABL.a */; };
 		C90028DD1547AE530044B6AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028DC1547AE530044B6AD /* UIKit.framework */; };
 		C90028DF1547AE530044B6AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028DE1547AE530044B6AD /* Foundation.framework */; };
 		C90028E11547AE530044B6AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90028E01547AE530044B6AD /* CoreGraphics.framework */; };
@@ -17,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		124DA98D1558A82500C9C22B /* libABL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libABL.a; path = "../../ABL/build/Debug-iphoneos/libABL.a"; sourceTree = "<group>"; };
 		C90028D81547AE530044B6AD /* ABL on iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABL on iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90028DC1547AE530044B6AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C90028DE1547AE530044B6AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124DA98E1558A82500C9C22B /* libABL.a in Frameworks */,
+				12A8CEB2156A042600991BD5 /* libABL.a in Frameworks */,
 				C90028DD1547AE530044B6AD /* UIKit.framework in Frameworks */,
 				C90028DF1547AE530044B6AD /* Foundation.framework in Frameworks */,
 				C90028E11547AE530044B6AD /* CoreGraphics.framework in Frameworks */,
@@ -49,7 +48,6 @@
 		C90028CD1547AE530044B6AD = {
 			isa = PBXGroup;
 			children = (
-				124DA98D1558A82500C9C22B /* libABL.a */,
 				C90028E21547AE530044B6AD /* ABL on iOS */,
 				C90028DB1547AE530044B6AD /* Frameworks */,
 				C90028D91547AE530044B6AD /* Products */,

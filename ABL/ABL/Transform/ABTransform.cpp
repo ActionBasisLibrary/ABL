@@ -30,16 +30,14 @@ void ABTransform::deleteSymbols()
 
 // Methods to get values
 
-const double *ABTransform::getValue(string name)
+void ABTransform::getValues(string name, double *buff)
 {
     if (!linked) link();
     
     if (symMap.count(name) > 0) {
         symbols.at(symMap[name])->update();
-        return symbols.at(symMap[name])->getValues();
+        symbols.at(symMap[name])->getValues(buff);
     }
-    
-    else return NULL;
 }
 
 // Methods to modify symbol tree
@@ -66,6 +64,17 @@ void ABTransform::addSymbols(ABSymbol **syms, int num)
 {
     for (int i = 0; i < num; i++)
         addSymbol(syms[i]);
+}
+
+bool ABTransform::startTick(string name)
+{
+    if (symMap.count(name) > 0) {
+        if (!linked) link();
+        ((ABSymTick*)symbols[symMap[name]])->start();
+        return true;
+    } else {
+        return false;
+    }
 }
 
 #pragma PRIVATE TREE METHODS

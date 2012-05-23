@@ -14,6 +14,7 @@
 #include <vector>
 
 #include "ABSymbol.h"
+#include "ABSymTick.h"
 
 using namespace std;
 
@@ -40,12 +41,16 @@ public:
     
     // Methods to get values
     
-    const double *getValue(string name);
+    void getValues(string name, double *buff);
     
     // Methods to modify symbol tree
     
     void addSymbol(ABSymbol *sym);
     void addSymbols(ABSymbol **sym, int num);
+    
+    // Wrapper methods for symbol actions
+    
+    bool startTick(string name);
     
 private:
     // Private methods

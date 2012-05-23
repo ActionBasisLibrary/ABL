@@ -22,9 +22,6 @@ using namespace std;
  */
 class ABSymbol {
 protected:
-    double *vals;
-    ABSymbol **inputSyms;
-    
     /*
      * Boolean definitions for update function
      */
@@ -33,11 +30,17 @@ protected:
     static const DataState DIRTY = false;
     
     DataState dataState;
+
+    ABSymbol **inputSyms;
     
 private:
     const string name;
+    unsigned int card, numInputs;
+    
     vector<string> inputNames;
-    const unsigned int card, numInputs;
+    
+    pthread_mutex_t vLock;
+    double *vals;
     
 public:
     ABSymbol(string name, unsigned int card, vector<string> &inputs);
@@ -48,7 +51,8 @@ public:
     /*
      * Virtual method to be subclassed into functionality
      */
-    virtual DataState update();
+    DataState update(bool force = false);
+    virtual void recalculate() = 0;
     
     /*
      * Special method for setting symbol pointers
@@ -56,24 +60,40 @@ public:
     inline void linkSymbol(unsigned int i, ABSymbol *ptr) { inputSyms[i] = ptr; }
     
     /*
-     * Methods for access the values and setting dependencies
+     * Synchronized methods for access the values
      */
-    inline const double *getValues() { return vals; }
-    inline double getValue(unsigned int i) { return vals[i]; }
+    void getValues(double *buff);
+    double getValue(unsigned int i);
     
+    /*
+     * Not synchronized access methods
+     */
     inline const string &getName() { return name; }
-    
     inline const string &getSymbolName(unsigned int i) { return inputNames[i]; }
-    
     inline virtual unsigned int getCard() { return card; }
     inline unsigned int getNumInputs() { return numInputs; }
-    
     string toString();
     
 protected:
+    ABSymbol(string name);
     
-    bool getTreeClean();
-    bool shouldUpdate();
+    /*
+     * Synchronized methods for setting values
+     */
+    void setValues(double *buff);
+    void setValue(double val, unsigned int i);
+    
+    /*
+     * Synchro utilities
+     */
+    inline void lock() { pthread_mutex_lock(&vLock); }
+    inline void unlock() { pthread_mutex_unlock(&vLock); }
+    
+    /*
+     * Custom modifiers for subclasses to change data
+     */
+    void setInputs(vector<string> &inputs);
+    void setCard(unsigned int c);
 };
 
 #endif
