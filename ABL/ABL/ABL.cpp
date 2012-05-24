@@ -324,7 +324,7 @@ void ABL::testCurves()
     ABSymSet xSym("x", 1, &x);
     
     vector<string> v(names,names+1);
-    ABSymCurve curve("curve", v, "time", 100, .05);
+    ABSymCurve curve("curve", v, "time", 100, .01);
     curve.linkSymbol(0, &xSym);
     curve.linkSymbol(1, &tSym);
     
@@ -337,22 +337,29 @@ void ABL::testCurves()
     
     
     x = t = 0.0;
-    for (int i = 0; i < 100; i++) {
+    int N = 1000;
+    for (int i = 0; i < N; i++) {
         t = i * M_PI / 10;
-        x = sin(t);
+        x = sin(t) * cos(2*t) + t*t*3;
         
         curve.update();
-        cout << curve.toString() << endl;
+        //cout << curve.toString() << endl;
     }
     
-    for (int i = 0; i < 100; i++) {
+    double adiff = 0.0;
+    for (int i = 0; i < N; i++) {
         t = i * M_PI / 10;
+        x = sin(t) * cos(2*t) + t*t*3;
         
         double vals[2];
         curve.getValues(vals, t);
-        cout << "x = " << vals[0] << ", t = " << vals[1] << endl;
-        cout << "diff = " << sin(t) - vals[0] << endl;
+        //cout << "x = " << vals[0] << ", t = " << vals[1] << endl;
+        adiff += (x - vals[0])*(x - vals[0]);
+        cout << "diff = " << x - vals[0] << endl;
     }
+    adiff /= N;
+    cout << "avdiff = " << adiff << endl;
+    
 }
 
 

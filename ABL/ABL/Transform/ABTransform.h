@@ -15,6 +15,7 @@
 
 #include "ABSymbol.h"
 #include "ABSymTick.h"
+#include "ABSymContinuous.h"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ public:
     // Methods to get values
     
     void getValues(string name, double *buff);
+    void getValues(string name, double *buff, double time);
     
     // Methods to modify symbol tree
     

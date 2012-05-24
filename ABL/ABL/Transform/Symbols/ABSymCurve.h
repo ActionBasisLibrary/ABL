@@ -38,7 +38,7 @@ private:
     vector< GCacheQueue > caches;
     int tCache;
     
-    const static int C_ORDER = 3;
+    const static int C_ORDER = 4;
     vector< vector< Piece<C_ORDER> > > curves;
 
 public:
@@ -56,7 +56,7 @@ private:
     
     double getValueAt(vector<Piece<C_ORDER> > &vect, double time);
     
-    static Piece<3> getCurve(GCacheQueue &c, GCacheQueue &tc);
+    static Piece<C_ORDER> getCurve(GCacheQueue &c, GCacheQueue &tc);
     static double distModify(int currSize, int maxSize);
 };
 

@@ -14,17 +14,17 @@ typedef techsoft::matrix<double> Matrix;
 typedef techsoft::valarray<double> Vector;
 
 ABSymCurve::ABSymCurve(string name, vector<string> &inputs, string time, int maxCache, double kDist)
-: ABSymContinuous(name, inputs.size()+1), order(C_ORDER), kDist(kDist)
+: ABSymContinuous(name, inputs.size()), order(C_ORDER), kDist(kDist)
 {
     inputs.push_back(time);
     setInputs(inputs);
 
-    tCache = getCard()-1;
+    tCache = getCard();
     
     if (maxCache < C_ORDER*2)
         maxCache = C_ORDER*2;
 
-    for (int i = 0; i < getCard(); i++) {
+    for (int i = 0; i < getCard()+1; i++) {
         GCacheQueue q(maxCache, 0.0);
         caches.push_back(q);
     }
@@ -62,8 +62,10 @@ void ABSymCurve::ABSymCurve::ABSymCurve::recalculate()
 bool ABSymCurve::ABSymCurve::ABSymCurve::pullCurrent()
 {
     if (!inputSyms[tCache]) return false;
+    
+    caches[tCache].shift(inputSyms[tCache]->getValue(0));
 
-    for (int i = 0; i < getCard(); i++) {
+    for (int i = 0; i < getCard(); i++) {       
         if (inputSyms[i]) {
             double v = inputSyms[i]->getValue(0);
             setValue(v, i);
@@ -86,14 +88,14 @@ void ABSymCurve::ABSymCurve::updateCurves()
         
         // Initialize if no curves
         if (curves[i].size() < 1) {
-            Piece<3> curve = ABSymCurve::getCurve(c, tc);
+            Piece<C_ORDER> curve = ABSymCurve::getCurve(c, tc);
             curves[i].push_back(curve);
         }
         
         // Run the full calculation
         else if (c.getSize() < c.getCard()) {
             
-            Piece<3> curve = ABSymCurve::getCurve(c, tc);
+            Piece<C_ORDER> curve = ABSymCurve::getCurve(c, tc);
         
             // If curve is still good, modify current top
             if (curve.r <= kDist * distModify(c.getSize(), c.getCard())) {
@@ -112,7 +114,7 @@ void ABSymCurve::ABSymCurve::updateCurves()
         // Otherwise, start a new top
         else {
             c.setSize(2);
-            Piece<3> curve = ABSymCurve::getCurve(c, tc);
+            Piece<C_ORDER> curve = ABSymCurve::getCurve(c, tc);
             curves[i].push_back(curve);
         }
 
@@ -127,7 +129,7 @@ void ABSymCurve::cullPast()
 double ABSymCurve::getValueAt(vector<Piece<C_ORDER> > &vect, double time)
 {
     for (int i = 0; i < (int)vect.size(); i++) {
-        Piece<3> &p = vect[i];
+        Piece<C_ORDER> &p = vect[i];
         
         if (p.tmin <= time && p.tmax >= time) {
             return p.eval(time);
