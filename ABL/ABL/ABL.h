@@ -20,6 +20,7 @@
 #include "ABSymCombine.h"
 #include "ABSymTick.h"
 #include "ABSymDifferentiate.h"
+#include "ABSymCurve.h"
 
 #include "GTimer.h"
 #include "GTimerThread.h"
@@ -35,6 +36,8 @@ private:
     static void testTransform();
     static void testCache();
     static void testCalculusSymbols();
+    static void testMatrices();
+    static void testCurves();
 };
 
 #endif

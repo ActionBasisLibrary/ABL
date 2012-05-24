@@ -9,6 +9,8 @@
 #include <iostream>
 #include "ABL.h"
 
+#include "cmatrix"
+
 GTimer timer;
 
 void ABL::test(){    
@@ -16,7 +18,9 @@ void ABL::test(){
 //    testTimerThread();
 //    testSymbols();
 //    testTransform();
-    testCalculusSymbols();
+//    testCalculusSymbols();
+//    testMatrices();
+    testCurves();
 }
 
 void message(void *vmsg)
@@ -268,3 +272,88 @@ void ABL::testCalculusSymbols()
         sleep(1);
     }
 }
+
+void ABL::testMatrices()
+{
+    typedef techsoft::matrix<double> Matrix;
+    typedef std::valarray<double> Vector;
+    
+    double t[] = { 1, 2, 3, 4, 5, 6 };
+    double x[] = { 1., 2., 3., 4., 5., 7. };
+    
+    double m[6*3];
+    for (int i = 0; i < 6; i++)
+        for (int j = 0; j < 3; j++)
+            m[i*3+j] = pow(t[i],j);
+    
+    Matrix A(6,3,m);
+    Vector v(x, 6);
+    
+    cout << "Printing matrix" << endl;
+    cout << A;
+    cout << "Printing vector" << endl;
+    for (int i = 0; i < 6; i++)
+        cout << v[i] << " ";
+    cout << endl;
+    
+    /*Matrix R;
+    A.qrd(R);
+    
+    cout << "Q:" << endl << A << endl;
+    cout << "R:" << endl << R << endl;
+    */
+    Vector s;
+    if (A.solve_qr(v, s))
+        printf("qr!\n");
+    
+    cout << "Solution:" << endl;
+    for (int i = 0; i < 6; i++)
+        cout << s[i] << " ";
+    cout << endl;
+    
+}
+
+void ABL::testCurves()
+{
+    string names[] = { "x", "time" };
+    
+    double t = 0.0;
+    ABSymSet tSym("time", 1, &t);
+    
+    double x = 0.0;
+    ABSymSet xSym("x", 1, &x);
+    
+    vector<string> v(names,names+1);
+    ABSymCurve curve("curve", v, "time", 100, .05);
+    curve.linkSymbol(0, &xSym);
+    curve.linkSymbol(1, &tSym);
+    
+    /*for (int i = 1; i < 20; i++) {
+        x = t = i * .1;
+        curve.update();
+        
+        cout << curve.toString() << endl;
+    }*/
+    
+    
+    x = t = 0.0;
+    for (int i = 0; i < 100; i++) {
+        t = i * M_PI / 10;
+        x = sin(t);
+        
+        curve.update();
+        cout << curve.toString() << endl;
+    }
+    
+    for (int i = 0; i < 100; i++) {
+        t = i * M_PI / 10;
+        
+        double vals[2];
+        curve.getValues(vals, t);
+        cout << "x = " << vals[0] << ", t = " << vals[1] << endl;
+        cout << "diff = " << sin(t) - vals[0] << endl;
+    }
+}
+
+
+

@@ -15,10 +15,11 @@
 class GCacheQueue {
 private:
     double *vals;
-    int curr, card;
+    int curr, card, size;
     
 public:
     GCacheQueue(int card, double ival = 0.0);
+    GCacheQueue(const GCacheQueue &other);
     ~GCacheQueue();
     
     /* 
@@ -31,11 +32,14 @@ public:
     void getOrderedValues(double *buffer);
     
     /*
-     * Pushing values
+     * Pushing and popping values
      */
     double shift(double nval);
+    double pop();
     
     inline int getCard() { return card; }
+    inline int getSize() { return size = (size <= card ? size : card); }
+    inline void setSize(int s) { size = s < card ? s : card; }
     
     std::string toString();
 };
