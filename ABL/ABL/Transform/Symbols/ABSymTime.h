@@ -23,7 +23,7 @@ private:
     int smoothRadius;
     
 public:
-    ABSymTime(string name, GTimer *atimer, int smoothRadius);
+    ABSymTime(string name, GTimer *atimer, int smoothRadius = 0);
     ~ABSymTime();
     
     virtual void recalculate();

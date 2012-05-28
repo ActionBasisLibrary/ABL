@@ -26,6 +26,7 @@ void ABTransform::deleteSymbols()
     symbols.clear();
     symMap.clear();
     numSyms = 0;
+    modifyTree();
 }
 
 // Methods to get values
@@ -40,13 +41,12 @@ void ABTransform::getValues(string name, double *buff)
     }
 }
 
-// Method for time-based cached values
 void ABTransform::getValues(string name, double *buff, double time)
 {
     if (!linked) link();
     
     if (symMap.count(name) > 0) {
-        symbols.at(symMap[name])->update();
+//        symbols.at(symMap[name])->update();
         ((ABSymContinuous*)symbols.at(symMap[name]))->getValues(buff, time);
     }
 }
@@ -82,6 +82,16 @@ bool ABTransform::startTick(string name)
     if (symMap.count(name) > 0) {
         if (!linked) link();
         ((ABSymTick*)symbols[symMap[name]])->start();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool ABTransform::stopTick(string name)
+{
+    if (symMap.count(name) > 0) {
+        ((ABSymTick*)symbols[symMap[name]])->stop();
         return true;
     } else {
         return false;

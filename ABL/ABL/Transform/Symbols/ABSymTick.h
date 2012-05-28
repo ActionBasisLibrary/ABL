@@ -43,6 +43,7 @@ public:
     ~ABSymTick();
     
     void start();
+    void stop();
     
     virtual void tick();
     

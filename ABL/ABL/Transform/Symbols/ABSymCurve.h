@@ -50,7 +50,7 @@ private:
     int *lastCurve, cullCount, maxCache;
 
 public:
-    ABSymCurve(string name, vector<string> &inputs, string time, int maxCache, double kDist);
+    ABSymCurve(string name, int card, string inputs, string time, int maxCache, double kDist);
     ~ABSymCurve();
 
     bool getValues(double *buff, double time);
@@ -58,6 +58,8 @@ public:
     void recalculate();
     
     void clear();
+    
+    void printStats();
 
 private:
     bool pullCurrent();

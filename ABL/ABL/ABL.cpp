@@ -17,10 +17,10 @@ void ABL::test(){
 //    testCache();
 //    testTimerThread();
 //    testSymbols();
-//    testTransform();
+    testTransform();
 //    testCalculusSymbols();
 //    testMatrices();
-    testCurves();
+//    testCurves();
 }
 
 void message(void *vmsg)
@@ -130,7 +130,7 @@ void ABL::testSymbols()
         vector<string> vect(names,names+2);
         
         ABSymbol *syms[3];
-        syms[0] = new ABSymTime("time1", &timer, 0);
+        syms[0] = new ABSymTime("time1", &timer);
         syms[1] = new ABSymTime("time2", &timer, 40);
         syms[2] = new ABSymTick("tick", vect, &ttimer, .1);
         
@@ -143,6 +143,23 @@ void ABL::testSymbols()
             cout << syms[1]->toString() << endl;
             sleep(1);
         }
+        
+        cout << "Testing stopped tick (should stay constant)" << endl;
+        ((ABSymTick*)syms[2])->stop();
+        for (int i = 0; i < 4; i++) {
+            cout << syms[0]->toString() << endl;
+            cout << syms[1]->toString() << endl;
+            sleep(1);
+        }
+        
+        cout << "And restart (should jump to correct time)" << endl;
+        ((ABSymTick*)syms[2])->start();
+        for (int i = 0; i < 4; i++) {
+            cout << syms[0]->toString() << endl;
+            cout << syms[1]->toString() << endl;
+            sleep(1);
+        }
+        
         
         cout << "deleting symbols..." << endl;
         delete syms[0];
@@ -158,11 +175,24 @@ bool pullTime(double *buff)
     return true;
 }
 
+
+static bool calcxyz(double *buff, double t)
+{
+    buff[0] = sin(t * 2*M_PI);
+    buff[1] = cos(t * 4*M_PI)*sin(t*M_PI);
+    buff[2] = 2*t;
+    return true;
+}
+static bool pullxyz(double *buff)
+{
+    return calcxyz(buff, timer.getTime());
+}
+
 void ABL::testTransform()
 {
     ABTransform transform(true);
     
-    {
+    if (false) {
         double pos0[] = {0, 1, 2, 3, 4, 5};
         double pos1[] = {0, 1, 2, 3};
         double pos2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -208,9 +238,9 @@ void ABL::testTransform()
         transform.deleteSymbols();
     }
     
-    printf("Clearing and starting input test.\n");
     
-    {
+    if (false) {
+        cout << "Clearing and starting input test." << endl;;
         string names[] = {"timepull", "time"};
         vector<string> compInputs(names, names+2);
         
@@ -227,6 +257,64 @@ void ABL::testTransform()
             
             printf("TimePull: %f, TimeReg: %f\n", tvals[0], tvals[1]);
             sleep(1);
+        }
+        
+        transform.deleteSymbols();
+    }
+    
+    {
+        cout << "Starting curve test" << endl;
+        
+        GTimerThread ttimer;
+        vector<string> vect;
+        
+        // Creating all of the symbols
+        
+        ABSymPull *xyzPull = new ABSymPull("xyz", 3, pullxyz);
+        
+        ABSymTime *time = new ABSymTime("time", &timer);
+        
+        vect.push_back("xyz");
+        vect.push_back("curve");
+        ABSymTick *tick = new ABSymTick("tick", vect, &ttimer, .005);
+        
+        ABSymCurve *curve = new ABSymCurve("curve", 3, "xyz", "time", 400, .001);
+        
+        // Loading the transform
+        transform.addSymbol(xyzPull);
+        transform.addSymbol(time);
+        transform.addSymbol(tick);
+        transform.addSymbol(curve);
+        
+        // Run the timer
+        int sp = 8;
+        cout << "Starting the clock and sleeping for " << sp << " secs" << endl;
+        timer.resetTime();
+        transform.startTick("tick");
+        
+        double tmin = timer.getTime() + .1;
+        
+        sleep(sp);
+        
+        double tmax = timer.getTime() - .1;
+        transform.stopTick("tick");
+        
+        // Now recap and check results
+        cout << "Stopped and printing: " << endl;
+        
+        curve->printStats();
+        cout << endl;
+        
+        int N = 6;
+        for (int i = 0; i <= N; i++) {
+            double t = tmin + i*(tmax - tmin)/N;
+            double xyz[3], xyz0[3];
+            
+            transform.getValues("curve", xyz, t);
+            calcxyz(xyz0, t);
+            
+            cout << "actual   : " << xyz0[0] << '\t' << xyz0[1] << '\t' << xyz0[2] << endl;
+            cout << "transform: " << xyz[0] << '\t' << xyz[1] << '\t' << xyz[2] << '\n' << endl;
         }
         
         transform.deleteSymbols();
@@ -315,16 +403,13 @@ void ABL::testMatrices()
 
 void ABL::testCurves()
 {
-    string names[] = { "x", "time" };
-    
     double t = 0.0;
     ABSymSet tSym("time", 1, &t);
     
     double x = 0.0;
     ABSymSet xSym("x", 1, &x);
     
-    vector<string> v(names,names+1);
-    ABSymCurve curve("curve", v, "time", 100, .01);
+    ABSymCurve curve("curve", 1, "x", "time", 100, .01);
     curve.linkSymbol(0, &xSym);
     curve.linkSymbol(1, &tSym);
     
@@ -337,7 +422,6 @@ void ABL::testCurves()
         
         curve.update();
     }
-    
 
     for (int i = 0; i < N; i++) {
         t = i * M_PI / 10;

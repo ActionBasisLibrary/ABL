@@ -34,29 +34,96 @@ private:
     vector<ABSymbol*> symbols;
     
 public:
-    // Public methods
+
+    /**
+     Create a transform object
+     
+     @param manageSymbols   true if a transform should delete allocated symbols, false by default
+     @see deleteSymbols()
+     */
     ABTransform(bool manageSymbols = false);
+    
+    /**
+     Delete a symbol object. Calls deleteSymbols if manageSymbols is set true
+     @see ABTransform()
+     */
     ~ABTransform();
     
+    /**
+     Deletes all symbols and clears containers.
+     */
     void deleteSymbols();
     
     // Methods to get values
     
+    
+    /**
+     Populates the provided buffer with the named symbol's data.
+     The user is responsible for knowing the correct size of the buffer.
+     
+     @param name    name of the symbol held by transform
+     @param buff    buffer to fill
+     */
     void getValues(string name, double *buff);
+    
+    /**
+     For symbols that are time dependant (like curves), returns the
+     values of the symbol at the time provided. The result returned
+     if "time" is not valid depends upon the symbol implementation.
+
+     @param name    name of the symbol held by the transform
+     @param buff    buffer to fill
+     @param time    time to use for calculation
+     */
     void getValues(string name, double *buff, double time);
     
     // Methods to modify symbol tree
     
+    /**
+     Add one symbol to the transform. Does no linking.
+
+     @param sym:   the symbol to add
+     */
     void addSymbol(ABSymbol *sym);
+    
+    /**
+     Add multiple symbols to the transform. Simply calls addSymbol on each.
+     
+     @param syms    array containing symbol pointers to add
+     @param num     number of symbols contained by array
+     */
     void addSymbols(ABSymbol **sym, int num);
     
     // Wrapper methods for symbol actions
     
+    /**
+     Links all symbols and initiates the tick symbol's update function.
+     
+     @param name    name of the tick symbol
+     @return        true if the symbol exists
+     */
     bool startTick(string name);
+    
+    /**
+     Interrupts a tick symbol's update function. It may be restarted.
+     
+     @param name    name of the tick symbol to be interrupted
+     @return        true if the symbol exists
+     */
+    bool stopTick(string name);
     
 private:
     // Private methods
+    
+    /*
+     Called whenever the symbol tree is modified. Primarily notates that
+     the tree should be linked
+     */
     void modifyTree();
+    
+    /*
+     Loops over all symbols and provides each a pointer to its dependencies.
+     */
     void link();
     
 };

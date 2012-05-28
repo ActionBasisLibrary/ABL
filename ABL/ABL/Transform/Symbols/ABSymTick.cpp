@@ -12,34 +12,44 @@ void tickUpdate(void *vsym);
 
 ABSymTick::ABSymTick(string name, vector<string> &inputs,
                      GTimerThread *atimer, double refreshTime)
-: ABSymbol(name, 0, inputs), timer(atimer), refresh(refreshTime)
+: ABSymbol(name, 0, inputs), timer(atimer), refresh(refreshTime),
+chunk(NULL)
 {   
-    // Initialize our synch variables
-    chunk = new tchunk(this);
+    
 }
 
 ABSymTick::~ABSymTick()
 {
-    chunk->lock();
-    
-    if (chunk->count > 0) {
-        chunk->count = -1;
-        chunk->unlock();
-    } else {
-        delete chunk;
-    }
+    stop();
 }
 
 void ABSymTick::start()
 {
-    chunk->lock();
-    
-    if (chunk->count == 0) {
+    if (!chunk) {
+        chunk = new tchunk(this);
+        
+        chunk->lock();
+        
         chunk->count = 1;
         timer->tick(tickUpdate, chunk, refresh);
+        
+        chunk->unlock();
     }
-    
-    chunk->unlock();
+}
+
+void ABSymTick::stop()
+{
+    if (chunk) {
+        chunk->lock();
+        
+        if (chunk->count > 0) {
+            chunk->count = -1;
+            chunk->unlock();
+        } else {
+            delete chunk;
+        }
+        chunk = NULL;
+    }
 }
 
 void ABSymTick::tick()
@@ -57,9 +67,9 @@ void tickUpdate(void *vchunk)
         
         chunk->sym->timer->tick(tickUpdate, chunk, chunk->sym->refresh);
         chunk->unlock();
-        return;
-    } else if (chunk->count < 0) {
+    }
+    
+    else if (chunk->count < 0) {
         delete chunk;
-        return;
     }
 }

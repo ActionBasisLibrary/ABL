@@ -13,9 +13,12 @@
 typedef techsoft::matrix<double> Matrix;
 typedef techsoft::valarray<double> Vector;
 
-ABSymCurve::ABSymCurve(string name, vector<string> &inputs, string time, int mCache, double kDist)
-: ABSymContinuous(name, inputs.size()), order(C_ORDER), kDist(kDist), maxCache(mCache), cullCount(0)
+ABSymCurve::ABSymCurve(string name, int card, string input, string time, int mCache, double kDist)
+: ABSymContinuous(name, card), order(C_ORDER),
+kDist(kDist), maxCache(mCache), cullCount(0)
 {
+    vector<string> inputs;
+    inputs.push_back(input);
     inputs.push_back(time);
     setInputs(inputs);
 
@@ -78,20 +81,16 @@ void ABSymCurve::clear()
 
 bool ABSymCurve::ABSymCurve::ABSymCurve::pullCurrent()
 {
-    if (!inputSyms[tCache]) return false;
+    if (!inputSyms[1] || !*inputSyms) return false;
     
-    caches[tCache].shift(inputSyms[tCache]->getValue(0));
+    caches[tCache].shift(inputSyms[1]->getValue(0));
+    
+    double buf[getCard()];
+    (*inputSyms)->getValues(buf);
+    setValues(buf);
 
-    for (int i = 0; i < getCard(); i++) {       
-        if (inputSyms[i]) {
-            double v = inputSyms[i]->getValue(0);
-            setValue(v, i);
-            caches[i].shift(v);
-        } else {
-            setValue(0.0, i);
-            caches[i].shift(0.0);
-        }
-    }
+    for (int i = 0; i < getCard(); i++)
+        caches[i].shift(buf[i]);
 
     return true;
 }
@@ -187,6 +186,7 @@ double ABSymCurve::getValueAt(int idx, double time)
     vector< Piece<C_ORDER> > &vect = curves[idx];
     int last = lastCurve[idx];
     
+    // left is inclusive, right is exclusive index
     int l = 0, r = vect.size();
     
     // First, check the last curve queried--usually consecutive
@@ -214,13 +214,13 @@ double ABSymCurve::getValueAt(int idx, double time)
     }
         
     // Now go into binary search
-    while (l <= r) {
+    do {
         int h = (l+r)/2;
         Piece<C_ORDER> &p = vect[h];
         
         // If this piece is entirely before the time
         if (p.tmax < time) {
-            l = h;
+            l = h + 1;
         }
         
         // If the piece is entirely after the time
@@ -233,7 +233,7 @@ double ABSymCurve::getValueAt(int idx, double time)
             lastCurve[idx] = h;
             return p.eval(time);
         }
-    }
+    } while (l < r);
     
     lastCurve[idx] = -1;
     
@@ -298,4 +298,12 @@ ABSymCurve::Piece<ABSymCurve::C_ORDER> ABSymCurve::getCurve(GCacheQueue &c, GCac
 double ABSymCurve::distModify(int currSize, int maxSize)
 {
     return 1.0;
+}
+
+void ABSymCurve::printStats()
+{
+    printf("Curve '%s' stats:\n", getName().c_str());
+    for (int i = 0; i < getCard(); i++) {
+        printf("\tIn %d: %d curves\n", i, (int)curves[i].size());
+    }
 }
