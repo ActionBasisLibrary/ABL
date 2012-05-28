@@ -32,8 +32,14 @@ ABSymTick::~ABSymTick()
 
 void ABSymTick::start()
 {
-    chunk->count = 1;
-    timer->tick(tickUpdate, chunk, refresh);
+    chunk->lock();
+    
+    if (chunk->count == 0) {
+        chunk->count = 1;
+        timer->tick(tickUpdate, chunk, refresh);
+    }
+    
+    chunk->unlock();
 }
 
 void ABSymTick::tick()

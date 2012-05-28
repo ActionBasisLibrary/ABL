@@ -328,25 +328,17 @@ void ABL::testCurves()
     curve.linkSymbol(0, &xSym);
     curve.linkSymbol(1, &tSym);
     
-    /*for (int i = 1; i < 20; i++) {
-        x = t = i * .1;
-        curve.update();
-        
-        cout << curve.toString() << endl;
-    }*/
-    
-    
-    x = t = 0.0;
     int N = 1000;
+    double adiff = 0.0;
+    x = t = 0.0;
     for (int i = 0; i < N; i++) {
         t = i * M_PI / 10;
         x = sin(t) * cos(2*t) + t*t*3;
         
         curve.update();
-        //cout << curve.toString() << endl;
     }
     
-    double adiff = 0.0;
+
     for (int i = 0; i < N; i++) {
         t = i * M_PI / 10;
         x = sin(t) * cos(2*t) + t*t*3;
@@ -355,10 +347,35 @@ void ABL::testCurves()
         curve.getValues(vals, t);
         //cout << "x = " << vals[0] << ", t = " << vals[1] << endl;
         adiff += (x - vals[0])*(x - vals[0]);
-        cout << "diff = " << x - vals[0] << endl;
+//        cout << "diff = " << x - vals[0] << endl;
     }
     adiff /= N;
-    cout << "avdiff = " << adiff << endl;
+    cout << "trig avdiff = " << adiff << endl;
+    
+    curve.clear();
+    
+    // Now run singularity tests
+    for (int i = 0; i < N; i++) {
+        t = i * 10.0 / N;
+        x = 1.0;
+        
+        curve.update();
+    }
+    
+    adiff = 0.0;
+    for (int i = 0; i < N; i++) {
+        t = i * 10.0 / N;
+        x = 1.0;
+        
+        double val;
+        curve.getValues(&val, t);
+        
+        adiff += (x - val)*(x - val);
+    }
+    adiff /= N;
+    cout << "singular avdiff = " << adiff << endl;
+    
+    curve.clear();
     
 }
 
