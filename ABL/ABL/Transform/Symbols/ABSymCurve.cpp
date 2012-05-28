@@ -7,7 +7,7 @@
 //
 
 #include "ABSymCurve.h"
-#include "cmatrix"
+#include "../../External/cmatrix"
 #include <assert.h>
 
 typedef techsoft::matrix<double> Matrix;
@@ -38,8 +38,8 @@ ABSymCurve::ABSymCurve(string name, vector<string> &inputs, string time, int mCa
 
 ABSymCurve::~ABSymCurve()
 {
-    for (int i = 0; i < getCard(); i++)
-        printf("Num pieces %s = %lu\n", getSymbolName(i).c_str(), curves[i].size());
+//    for (int i = 0; i < getCard(); i++)
+//        printf("Num pieces %s = %lu\n", getSymbolName(i).c_str(), curves[i].size());
     delete[] lastCurve;
 }
 
@@ -124,11 +124,11 @@ void ABSymCurve::ABSymCurve::updateCurves()
             
             // Curve is not good, so start a new one!
             else {
-                printf("Fit Final %d:\n", (int)curves[i].size()-1);
-                printf("\ttmin: %f, tmax: %f\n\t", curves[i].back().tmin, curves[i].back().tmax);
-                for (int c = 0; c <= C_ORDER; c++)
-                    printf(" %f", curves[i].back().coef[c]);
-                printf("\n");
+//                printf("Fit Final %d:\n", (int)curves[i].size()-1);
+//                printf("\ttmin: %f, tmax: %f\n\t", curves[i].back().tmin, curves[i].back().tmax);
+//                for (int c = 0; c <= C_ORDER; c++)
+//                    printf(" %f", curves[i].back().coef[c]);
+//                printf("\n");
                 
                 c.setSize(2);
                 curve = ABSymCurve::getCurve(c, tc);
@@ -139,11 +139,11 @@ void ABSymCurve::ABSymCurve::updateCurves()
 
         // Otherwise, start a new top
         else {
-            printf("Num Final %d:\n", (int)curves[i].size()-1);
-            printf("\ttmin: %f, tmax: %f\n\t", curves[i].back().tmin, curves[i].back().tmax);
-            for (int c = 0; c <= C_ORDER; c++)
-                printf(" %f", curves[i].back().coef[c]);
-            printf("\n");
+//            printf("Num Final %d:\n", (int)curves[i].size()-1);
+//            printf("\ttmin: %f, tmax: %f\n\t", curves[i].back().tmin, curves[i].back().tmax);
+//            for (int c = 0; c <= C_ORDER; c++)
+//                printf(" %f", curves[i].back().coef[c]);
+//            printf("\n");
             
             c.setSize(2);
             Piece<C_ORDER> curve = ABSymCurve::getCurve(c, tc);

@@ -22,6 +22,8 @@ void ABSymVarPull::recalculate()
         setValues(buff);
         dataState = DIRTY;
     }
+	
+	dataState = DIRTY;
 }
 
 unsigned int ABSymVarPull::getCard()

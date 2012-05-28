@@ -14,13 +14,13 @@
  */
 ABSymbol::ABSymbol(string name)
 : card(0), vals(NULL), name(name),
-numInputs(0), dataState(DIRTY)
+numInputs(0), dataState(DIRTY), inputSyms(NULL)
 {
     
 }
 
 ABSymbol::ABSymbol(string name, unsigned int card, vector<string> &inputs)
-: name(name), card(card),
+: name(name), card(card), inputSyms(NULL),
 vals(new double[card]), dataState(DIRTY)
 {
     pthread_mutex_init(&vLock, NULL);
@@ -29,7 +29,7 @@ vals(new double[card]), dataState(DIRTY)
 }
 
 ABSymbol::ABSymbol(string name, unsigned int card, string input)
-: name(name), card(card),
+: name(name), card(card), inputSyms(NULL),
 vals(new double[card]), dataState(DIRTY)
 {    
     pthread_mutex_init(&vLock, NULL);
@@ -40,7 +40,7 @@ vals(new double[card]), dataState(DIRTY)
 
 ABSymbol::ABSymbol(string name, unsigned int card)
 : name(name), card(card), inputNames(), numInputs(0),
-vals(new double[card]), dataState(DIRTY)
+vals(new double[card]), dataState(DIRTY), inputSyms(NULL)
 {
     pthread_mutex_init(&vLock, NULL);
     
