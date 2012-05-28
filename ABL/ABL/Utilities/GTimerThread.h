@@ -25,6 +25,11 @@ private:
         void *data;
         timeval time;
         Task() :fn(NULL), data(NULL), time() {}
+		/*Task(const Task &other) {
+			data = other.data;
+			fn = other.fn;
+			time = other.time;
+		}*/
     };
     
     class TaskCompare {
@@ -40,6 +45,7 @@ private:
     pthread_t thread;
     pthread_mutex_t queueLock;
     pthread_cond_t wakeFlag;
+	
     priority_queue< Task, vector<Task>, TaskCompare > queue;
     
     bool serveFlag;

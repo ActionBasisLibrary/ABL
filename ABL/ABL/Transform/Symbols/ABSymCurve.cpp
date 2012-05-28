@@ -7,7 +7,7 @@
 //
 
 #include "ABSymCurve.h"
-#include "cmatrix"
+#include "../../External/cmatrix"
 #include <assert.h>
 
 typedef techsoft::matrix<double> Matrix;
