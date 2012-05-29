@@ -188,6 +188,7 @@ double ABSymCurve::getValueAt(int idx, double time)
     
     // left is inclusive, right is exclusive index
     int l = 0, r = vect.size();
+	if (r == 0) return -1;
     
     // First, check the last curve queried--usually consecutive
     // queuries will be for the same curve or consecutive curves
