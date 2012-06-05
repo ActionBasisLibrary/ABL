@@ -81,7 +81,7 @@ ABSymbol::DataState ABSymbol::update(bool force)
 void ABSymbol::getValues(double *buff)
 {
     lock();
-    memcpy(buff, vals, card*sizeof(double));
+    memcpy(buff, vals, getCard()*sizeof(double));
     unlock();
 }
 
