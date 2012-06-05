@@ -20,10 +20,9 @@ class ABSymTime : public ABSymbol {
 private:
     GCacheQueue que;
     GTimer *timer;
-    int smoothRadius;
     
 public:
-    ABSymTime(string name, GTimer *atimer, int smoothRadius = 0);
+    ABSymTime(string name, GTimer *atimer);
     ~ABSymTime();
     
     virtual void recalculate();

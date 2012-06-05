@@ -21,6 +21,7 @@
 #include "ABSymTick.h"
 #include "ABSymDifferentiate.h"
 #include "ABSymCurve.h"
+#include "ABSymCurvature.h"
 
 #include "GTimer.h"
 #include "GTimerThread.h"
@@ -38,6 +39,7 @@ private:
     static void testCalculusSymbols();
     static void testMatrices();
     static void testCurves();
+    static void testCurvature();
 };
 
 #endif

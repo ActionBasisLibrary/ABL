@@ -60,9 +60,12 @@ ABSymbol::~ABSymbol()
 ABSymbol::DataState ABSymbol::update(bool force)
 {
     DataState treeState = dataState;
-    for (size_t i = 0; i < numInputs; i++)
+    for (size_t i = 0; i < numInputs; i++) {
         if (inputSyms[i])
             treeState = inputSyms[i]->update(force) && treeState;
+        else
+            logSymbolNotFound(i);
+    }
     
     dataState = CLEAN;
     
@@ -123,6 +126,14 @@ void ABSymbol::setCard(unsigned int c)
         delete[] vals;
     card = c;
     vals = new double[card];
+}
+
+/*
+ * Reporting utilities
+ */
+void ABSymbol::logSymbolNotFound(int i)
+{
+    fprintf(stderr, "Symbol '%s' could not find symbol '%s'.\n", name.c_str(), inputNames[i].c_str());
 }
 
 /*

@@ -15,10 +15,11 @@
 class GCacheQueue {
 private:
     double *vals;
+    double sum;
     int curr, card, size;
     
 public:
-    GCacheQueue(int card, double ival = 0.0);
+    GCacheQueue(int card, int isize = 0, double ival = 0.0);
     GCacheQueue(const GCacheQueue &other);
     ~GCacheQueue();
     
@@ -28,6 +29,8 @@ public:
     inline double &operator[](int idx) { return vals[(curr+idx)%card]; }
     
     inline void getValues(double *buffer) { memcpy(buffer, vals, card*sizeof(double)); }
+    
+    inline double getSum() { return sum; }
     
     void getOrderedValues(double *buffer);
     

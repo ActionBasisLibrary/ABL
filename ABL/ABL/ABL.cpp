@@ -17,10 +17,11 @@ void ABL::test(){
 //    testCache();
 //    testTimerThread();
 //    testSymbols();
-    testTransform();
+//    testTransform();
 //    testCalculusSymbols();
 //    testMatrices();
 //    testCurves();
+    testCurvature();
 }
 
 void message(void *vmsg)
@@ -31,7 +32,7 @@ void message(void *vmsg)
 
 void ABL::testCache()
 {
-    int card = 50;
+    int card = 5;
     GCacheQueue q(card, 0);
     
     cout << q.toString() << endl;
@@ -40,10 +41,12 @@ void ABL::testCache()
         q.shift(i);
     
     cout << q.toString() << endl;
+    cout << "Sum: " << q.getSum() << endl;
     
     q.shift(card+1);
     q.shift(card+2);
     cout << q.toString() << endl;
+    cout << "Sum: " << q.getSum() << endl;
     
     double vals[card];
     q.getValues(vals);
@@ -131,7 +134,7 @@ void ABL::testSymbols()
         
         ABSymbol *syms[3];
         syms[0] = new ABSymTime("time1", &timer);
-        syms[1] = new ABSymTime("time2", &timer, 40);
+        syms[1] = new ABSymTime("time2", &timer);
         syms[2] = new ABSymTick("tick", vect, &ttimer, .1);
         
         syms[2]->linkSymbol(0, syms[0]);
@@ -245,7 +248,7 @@ void ABL::testTransform()
         vector<string> compInputs(names, names+2);
         
         ABSymPull *timePull = new ABSymPull("timepull", 1, pullTime);
-        ABSymTime *timeTime = new ABSymTime("time", &timer, 2);
+        ABSymTime *timeTime = new ABSymTime("time", &timer);
         ABSymbol *comp = new ABSymCombine("timeComp", compInputs);
         transform.addSymbol(timePull);
         transform.addSymbol(timeTime);
@@ -334,7 +337,7 @@ void ABL::testCalculusSymbols()
     string names[] = { "x", "dx", "time" };
     
     ABSymPull *pull = new ABSymPull("x", 1, xFn);
-    ABSymTime *time = new ABSymTime("time", &timer, 0);
+    ABSymTime *time = new ABSymTime("time", &timer);
     
     vector<string> vect(names, names+1);
     ABSymDifferentiate *diff = new ABSymDifferentiate("dx", vect, "time");
@@ -463,5 +466,33 @@ void ABL::testCurves()
     
 }
 
-
-
+void ABL::testCurvature()
+{
+    double xval[3], time;
+    
+    ABSymSet xsym("x", 3, xval);
+    ABSymSet tsym("time", 1, &time);
+    ABSymCurvature Ksym("K", "x", 3, "time");
+    
+    ABTransform T;
+    T.addSymbol(&xsym);
+    T.addSymbol(&tsym);
+    T.addSymbol(&Ksym);
+    
+    int N = 100;
+    for (int i = 0; i < N; i++) {
+        time = (M_PI * i) / N;
+        
+        xval[0] = time;
+        xval[1] = time*time;
+        xval[2] = time*time;
+        
+        double K;
+        T.getValues("K", &K);
+        
+        cout << "t: " << time << " ";
+        cout << "x: " << xval[0] << " " << xval[1] << " " << xval[2] << " ";
+        cout << "K: " << K << endl;
+    }
+    
+}

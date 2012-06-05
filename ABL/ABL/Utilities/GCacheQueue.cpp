@@ -9,11 +9,19 @@
 #include "GCacheQueue.h"
 #include <sstream>
 
-GCacheQueue::GCacheQueue(int card, double ival)
-: vals(new double[card]), card(card), curr(0), size(0)
+GCacheQueue::GCacheQueue(int card, int isize, double ival)
+: vals(new double[card]), card(card), curr(0), size(0), sum(0.0)
 {
-    for (int i = 0; i < card; i++)
+    // Init isize values
+    for (int i = 0; i < isize; i++)
         vals[i] = ival;
+    
+    // Init rest to 0.0
+    for (int i = isize; i < card; i++)
+        vals[i] = 0.0;
+    
+    // Set sum to isize * ival
+    sum = ival * isize;
 }
 
 GCacheQueue::GCacheQueue(const GCacheQueue &other)
@@ -37,8 +45,11 @@ void GCacheQueue::getOrderedValues(double *buffer)
 double GCacheQueue::shift(double nval)
 {
     double rval = vals[curr=(curr ? curr-1 : card-1)];
+    
     vals[curr] = nval;
     size = size < card ? size+1 : card;
+    
+    sum = sum + nval - rval;
     return rval;
 }
 
@@ -47,7 +58,10 @@ double GCacheQueue::pop()
     if (size < 1) return 0.0;
     
     double rval = (*this)[size-1];
+    
+    sum -= rval;
     size--;
+    
     return rval;
     
 }

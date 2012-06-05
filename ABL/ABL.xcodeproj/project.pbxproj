@@ -35,6 +35,14 @@
 		12A8CED2156CC86500991BD5 /* ABSymCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */; };
 		12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CED1156CC85900991BD5 /* ABSymCurve.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12A8CED7156CC89C00991BD5 /* ABSymContinuous.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C3EA48157C995100D5206F /* ABSymCurvature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C3EA46157C995000D5206F /* ABSymCurvature.cpp */; };
+		12C3EA49157C995100D5206F /* ABSymCurvature.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C3EA47157C995000D5206F /* ABSymCurvature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C3EAD0157DD49C00D5206F /* ABSymMinMax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C3EACE157DD49400D5206F /* ABSymMinMax.cpp */; };
+		12C3EAD1157DD49C00D5206F /* ABSymMinMax.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C3EACF157DD49600D5206F /* ABSymMinMax.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C3EAD4157DDF3A00D5206F /* ABSymNorm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C3EAD2157DDF3800D5206F /* ABSymNorm.cpp */; };
+		12C3EAD5157DDF3A00D5206F /* ABSymNorm.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C3EAD3157DDF3900D5206F /* ABSymNorm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C3EAD8157DED0F00D5206F /* ABSymSmooth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C3EAD6157DED0C00D5206F /* ABSymSmooth.cpp */; };
+		12C3EAD9157DED0F00D5206F /* ABSymSmooth.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C3EAD7157DED0D00D5206F /* ABSymSmooth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C90029161547C8820044B6AD /* ABL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL.cpp */; };
 		C90029171547C92F0044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -68,6 +76,14 @@
 		12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCurve.cpp; sourceTree = "<group>"; };
 		12A8CED1156CC85900991BD5 /* ABSymCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCurve.h; sourceTree = "<group>"; };
 		12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymContinuous.h; sourceTree = "<group>"; };
+		12C3EA46157C995000D5206F /* ABSymCurvature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCurvature.cpp; sourceTree = "<group>"; };
+		12C3EA47157C995000D5206F /* ABSymCurvature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCurvature.h; sourceTree = "<group>"; };
+		12C3EACE157DD49400D5206F /* ABSymMinMax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymMinMax.cpp; sourceTree = "<group>"; };
+		12C3EACF157DD49600D5206F /* ABSymMinMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymMinMax.h; sourceTree = "<group>"; };
+		12C3EAD2157DDF3800D5206F /* ABSymNorm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymNorm.cpp; sourceTree = "<group>"; };
+		12C3EAD3157DDF3900D5206F /* ABSymNorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymNorm.h; sourceTree = "<group>"; };
+		12C3EAD6157DED0C00D5206F /* ABSymSmooth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymSmooth.cpp; sourceTree = "<group>"; };
+		12C3EAD7157DED0D00D5206F /* ABSymSmooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymSmooth.h; sourceTree = "<group>"; };
 		12CB01CA156D7DD2002A9B05 /* cmatrix */ = {isa = PBXFileReference; lastKnownFileType = text; path = cmatrix; sourceTree = "<group>"; };
 		12CB01CB156D7DD2002A9B05 /* matrix.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cc; sourceTree = "<group>"; };
 		12CB01CC156D7DD2002A9B05 /* matrix2.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix2.hxx; sourceTree = "<group>"; };
@@ -121,6 +137,14 @@
 				12A8CECC156B206800991BD5 /* ABSymDifferentiate.cpp */,
 				12A8CED1156CC85900991BD5 /* ABSymCurve.h */,
 				12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */,
+				12C3EA47157C995000D5206F /* ABSymCurvature.h */,
+				12C3EA46157C995000D5206F /* ABSymCurvature.cpp */,
+				12C3EACE157DD49400D5206F /* ABSymMinMax.cpp */,
+				12C3EACF157DD49600D5206F /* ABSymMinMax.h */,
+				12C3EAD2157DDF3800D5206F /* ABSymNorm.cpp */,
+				12C3EAD3157DDF3900D5206F /* ABSymNorm.h */,
+				12C3EAD6157DED0C00D5206F /* ABSymSmooth.cpp */,
+				12C3EAD7157DED0D00D5206F /* ABSymSmooth.h */,
 			);
 			path = Symbols;
 			sourceTree = "<group>";
@@ -207,6 +231,10 @@
 				12A8CEC7156A24E200991BD5 /* ABSymSet.h in Headers */,
 				12A8CECF156B206A00991BD5 /* ABSymDifferentiate.h in Headers */,
 				12A8CED7156CC89C00991BD5 /* ABSymContinuous.h in Headers */,
+				12C3EA49157C995100D5206F /* ABSymCurvature.h in Headers */,
+				12C3EAD1157DD49C00D5206F /* ABSymMinMax.h in Headers */,
+				12C3EAD5157DDF3A00D5206F /* ABSymNorm.h in Headers */,
+				12C3EAD9157DED0F00D5206F /* ABSymSmooth.h in Headers */,
 				12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +304,10 @@
 				12A8CECA156B075400991BD5 /* ABSymTick.cpp in Sources */,
 				12A8CECE156B206A00991BD5 /* ABSymDifferentiate.cpp in Sources */,
 				12A8CED2156CC86500991BD5 /* ABSymCurve.cpp in Sources */,
+				12C3EA48157C995100D5206F /* ABSymCurvature.cpp in Sources */,
+				12C3EAD0157DD49C00D5206F /* ABSymMinMax.cpp in Sources */,
+				12C3EAD4157DDF3A00D5206F /* ABSymNorm.cpp in Sources */,
+				12C3EAD8157DED0F00D5206F /* ABSymSmooth.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

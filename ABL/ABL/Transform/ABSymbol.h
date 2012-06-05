@@ -21,6 +21,9 @@ using namespace std;
  * Input value locations and updates output values with custom pointer
  */
 class ABSymbol {
+public:
+    static const int NUM_PRIMER_RUNS = 4;
+    
 protected:
     /*
      * Boolean definitions for update function
@@ -245,6 +248,16 @@ protected:
      @see setInputs()
      */
     void setCard(unsigned int c);
+    
+    // REPORTING UTILITIES
+    
+    /**
+     Logs an error message that the specified symbol could not be found
+    
+     @param i   null symbol index
+     */
+    void logSymbolNotFound(int i);
+     
 };
 
 #endif

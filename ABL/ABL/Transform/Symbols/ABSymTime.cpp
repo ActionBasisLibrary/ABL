@@ -10,9 +10,9 @@
 
 const static int MAX_DERIV = 2;
 
-ABSymTime::ABSymTime(string name, GTimer *atimer, int smoothRadius)
-: ABSymbol(name, MAX_DERIV+1), timer(atimer), smoothRadius(smoothRadius),
- que(max(MAX_DERIV, smoothRadius)+1)
+ABSymTime::ABSymTime(string name, GTimer *atimer)
+: ABSymbol(name, MAX_DERIV+1), timer(atimer),
+ que(MAX_DERIV+1)
 {
     recalculate();
 }
@@ -40,14 +40,7 @@ void ABSymTime::recalculate()
         for (int j = 0; j < c-i; j++)
             d[j] = d[j]-d[j+1];
         
-        if (smoothRadius > 0) {
-            double sum = 0.0;
-            for (int j = 0; j < min(smoothRadius+1, c-i); j++)
-                sum += d[j];
-            setValue(sum / (smoothRadius+1), i);
-        } else {
-            setValue(d[0], i);   
-        }
+        setValue(d[0], i); 
     }
     
     dataState = DIRTY;
