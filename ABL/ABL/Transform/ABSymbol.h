@@ -151,14 +151,21 @@ public:
      
      @return    immutable string name of symbol
      */
-    inline const string &getName() { return name; }
+    inline const string &getName() const { return name; }
     
     /**
      Method for obtaining the name of a dependency to the symbol. Used by transform to link symbols.
      
      @param i   index into inputSyms/inputNames
      */
-    inline const string &getSymbolName(unsigned int i) { return inputNames[i]; }
+    inline const string &getSymbolName(unsigned int i) const { return inputNames[i]; }
+    
+    /**
+     Method for obtaining the current address of a dependency.
+     
+     @param i   index into inputSyms
+     */
+    inline const ABSymbol *getSymbolPointer(unsigned int i) const { return inputSyms[i]; }
     
     /**
      Returns the cardinality of the symbol's data. This is the size of the data buffer and any buffer that
@@ -173,7 +180,7 @@ public:
      
      @return unsigned int number of dependencies.
      */
-    inline unsigned int getNumInputs() { return numInputs; }
+    inline unsigned int getNumInputs() const { return numInputs; }
     
     /**
      Creates a string representation of this symbol useful for debugging.
@@ -239,6 +246,13 @@ protected:
      @see setCard()
      */
     void setInputs(vector<string> &inputs);
+    
+    /**
+     Sets new input symbols that are a subset of previous input symbols.
+     
+     @param inputs  vector of indices to copy
+     */
+    bool setAndRelinkInputs(vector<int> &indices);
     
     /**
      Sets the cardinality of this symbol. Only called by symbols that need to make

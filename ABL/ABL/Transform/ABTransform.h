@@ -67,6 +67,16 @@ public:
     void getValues(string name, double *buff);
     
     /**
+     Updates the provided symbol and populates the provided
+     buffer with the named symbol's data.
+     The user is responsible for knowing the correct size of the buffer.
+     
+     @param name    name of the symbol held by transform
+     @param buff    buffer to fill
+     */
+    void updateAndGetValues(string name, double *buff);
+    
+    /**
      For symbols that are time dependant (like curves), returns the
      values of the symbol at the time provided. The result returned
      if "time" is not valid depends upon the symbol implementation.
@@ -111,6 +121,18 @@ public:
      @return        true if the symbol exists
      */
     bool stopTick(string name);
+    
+    /**
+     Use to print a certain symbol's info
+     
+     @param name    name of the symbol to be queried.
+     */
+    inline string getSymbolString(string name) { return symbols[symMap[name]]->toString(); }
+    
+    /**
+     Use to print all symbols and their dependencies for debugging
+     */
+    void printSymbolDependencies(ostream &str);
     
 private:
     // Private methods

@@ -50,6 +50,9 @@ public:
     virtual void recalculate() { dataState = DIRTY; }
     
     friend void tickUpdate(void *vchunk);
+    
+private:
+    void cullChildren();
 };
 
 #endif

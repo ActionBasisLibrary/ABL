@@ -23,8 +23,11 @@ ABSymMean::ABSymMean(string name, string input)
 void ABSymMean::recalculate()
 {
     double sums[getCard()];
+    for (int i = 0; i < getCard(); i++)
+        sums[i] = 0.0;
+    
     for (unsigned int i = 0; i < getCard(); i++) {
-        if (!inputSyms[i]) continue;
+        if (!inputSyms[i] || inputSyms[i]->getCard() == 0) continue;
         double buff[inputSyms[i]->getCard()];// = new double[inputSyms[i]->getCard()];
         inputSyms[i]->getValues(buff);
         
@@ -34,4 +37,6 @@ void ABSymMean::recalculate()
         sums[i] /= inputSyms[i]->getCard();
     }
     setValues(sums);
+    
+    dataState = DIRTY;
 }

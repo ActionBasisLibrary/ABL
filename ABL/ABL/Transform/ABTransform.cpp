@@ -35,6 +35,14 @@ void ABTransform::getValues(string name, double *buff)
 {
     if (!linked) link();
     
+    if (symMap.count(name) > 0)
+        symbols.at(symMap[name])->getValues(buff);
+}
+
+void ABTransform::updateAndGetValues(string name, double *buff)
+{
+    if (!linked) link();
+
     if (symMap.count(name) > 0) {
         symbols.at(symMap[name])->update();
         symbols.at(symMap[name])->getValues(buff);
@@ -45,10 +53,8 @@ void ABTransform::getValues(string name, double *buff, double time)
 {
     if (!linked) link();
     
-    if (symMap.count(name) > 0) {
-//        symbols.at(symMap[name])->update();
+    if (symMap.count(name) > 0)
         ((ABSymContinuous*)symbols.at(symMap[name]))->getValues(buff, time);
-    }
 }
 
 // Methods to modify symbol tree
@@ -95,6 +101,18 @@ bool ABTransform::stopTick(string name)
         return true;
     } else {
         return false;
+    }
+}
+
+void ABTransform::printSymbolDependencies(ostream &str)
+{
+    for (int i = 0; i < symbols.size(); i++) {
+        ABSymbol *sym = symbols[i];
+        str << sym->getName() << ": ";
+        for (int d = 0; d < sym->getNumInputs(); d++) {
+            str << (d == 0 ? "" : ", ") << sym->getSymbolName(d);
+        }
+        str << endl;
     }
 }
 

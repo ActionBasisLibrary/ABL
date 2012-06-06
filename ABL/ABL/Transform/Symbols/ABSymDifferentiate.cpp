@@ -27,6 +27,8 @@ ABSymDifferentiate::ABSymDifferentiate(string name, vector<string> &inputs, stri
     timeIdx = inputs.size()-1;
     
     lastVals = new double[getCard()];
+    for (int i = 0; i < getCard(); i++)
+        lastVals[i] = 0.0;
     
     lastTime = 0;
 }
@@ -39,6 +41,8 @@ ABSymDifferentiate::~ABSymDifferentiate()
 void ABSymDifferentiate::recalculate()
 {
     double t = (inputSyms[timeIdx] ? inputSyms[timeIdx]->getValue(0) : -1.0);
+    if (t == lastTime) return;
+    
     double x[getCard()];
     for (int i = 0; i < getCard(); i++)
         x[i] = (inputSyms[i] ? inputSyms[i]->getValue(0) : 0.0);
@@ -52,10 +56,9 @@ void ABSymDifferentiate::recalculate()
     
     double dx[getCard()];
     for (int i = 0; i < getCard(); i++)
-        dx[i] = ((x[i]-lastVals[i])*idt + dx0[i])*.5;
+//        dx[i] = ((x[i]-lastVals[i])*idt + dx0[i])*.5;
+        dx[i] = (x[i] - lastVals[i])*idt;
     memcpy(lastVals, x, sizeof(double)*getCard());
     
     setValues(dx);
-    
-    dataState = DIRTY;
 }

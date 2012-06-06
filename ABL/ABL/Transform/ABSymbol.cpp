@@ -120,6 +120,29 @@ void ABSymbol::setInputs(vector<string> &inputs)
         inputSyms[i] = NULL;
 }
 
+bool ABSymbol::setAndRelinkInputs(vector<int> &indices)
+{
+    vector<string> newInputs;
+    vector<ABSymbol *> newSyms;
+    
+    // First, copy appropriate symbols
+    for (int i = 0; i < indices.size(); i++) {
+        if (i >= getNumInputs()) return false;
+        
+        newInputs.push_back(inputNames[indices[i]]);
+        newSyms.push_back(inputSyms[indices[i]]);
+    }
+    
+    // Now reset input vectors
+    setInputs(newInputs);
+    
+    // New replace pointers
+    for (int i = 0; i < newSyms.size(); i++)
+        inputSyms[i] = newSyms[i];
+    
+    return true;
+}
+
 void ABSymbol::setCard(unsigned int c)
 {
     if (vals)

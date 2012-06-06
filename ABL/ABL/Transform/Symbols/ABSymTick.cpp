@@ -26,6 +26,8 @@ ABSymTick::~ABSymTick()
 void ABSymTick::start()
 {
     if (!chunk) {
+        cullChildren();
+        
         chunk = new tchunk(this);
         
         chunk->lock();
@@ -72,4 +74,60 @@ void tickUpdate(void *vchunk)
     else if (chunk->count < 0) {
         delete chunk;
     }
+}
+
+void ABSymTick::cullChildren()
+{
+    bool include[getNumInputs()];
+    vector<const ABSymbol*> symList;
+    
+    // Initialize stack and include arrays
+    for (int i = 0; i < getNumInputs(); i++) {
+        include[i] = true;
+        symList.push_back(getSymbolPointer(i));
+    }
+    
+    // We need to run a complicated DFS to tap out descendents
+    int skip = getNumInputs();
+    while (symList.size() > 0) {
+        const ABSymbol *sym = symList.back();
+        symList.pop_back();
+        if (!sym) continue;
+        
+        // This is one of the tick's kids, so don't check the vector
+        if (symList.size() < skip) {
+            skip--;
+            
+            // Find its index and check if it's been marked to cull already
+            // continue if so
+            if (!include[skip]) continue;
+            
+            for (int i = 0; i < sym->getNumInputs(); i++)
+                symList.push_back(sym->getSymbolPointer(i));
+        }
+        
+        // This is not an immediate kid, so check
+        else {
+            for (int i = 0; i < getNumInputs(); i++) {
+                
+                // Descendant is in first kids array, so mark for culling
+                if (getSymbolName(i).compare(sym->getName()) == 0) {
+                    // if already culled, we don't need to check lower
+                    if (!include[i]) break;
+                    
+                    for (int j = 0; j < sym->getNumInputs(); j++)
+                        symList.push_back(sym->getSymbolPointer(j));
+                    
+                    include[i] = false;
+                }
+                   
+            }
+        }
+    }
+    
+    // Now that we have include array, create new 
+    vector<int> idxs;
+    for (int i = 0; i < getNumInputs(); i++)
+        if (include[i]) idxs.push_back(i);
+    setAndRelinkInputs(idxs);
 }
