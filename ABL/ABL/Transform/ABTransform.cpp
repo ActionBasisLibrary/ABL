@@ -7,6 +7,7 @@
 //
 
 #include "ABTransform.h"
+#include "ABSymCurve.h"
 
 ABTransform::ABTransform(bool manageSymbols)
 : numSyms(0), linked(false), manageSyms(manageSymbols)
@@ -115,6 +116,17 @@ void ABTransform::printSymbolDependencies(ostream &str)
         str << endl;
     }
 }
+
+bool ABTransform::printCurveData(string name)
+{
+	if (symMap.count(name) > 0) {
+        ((ABSymCurve*)symbols[symMap[name]])->printStats();
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 #pragma PRIVATE TREE METHODS
 

@@ -134,6 +134,11 @@ public:
      */
     void printSymbolDependencies(ostream &str);
     
+	/**
+	 Calls the printStats function on an ABSymCurve
+	 */
+	bool printCurveData(string name);
+	
 private:
     // Private methods
     
