@@ -14,6 +14,7 @@ ABQuadIntegrator::ABQuadIntegrator(string name, string input, string time, doubl
     vector<string> names;
     names.push_back(input);
     names.push_back(time);
+    setInputs(names);
     
     center[0] = ctr[0];
     center[1] = ctr[1];
@@ -32,6 +33,8 @@ void ABQuadIntegrator::recalculate()
     
     double x[2];
     inputSyms[0]->getValues(x);
+    if (x[0] < 1 || x[1] < 1) return;
+    
     x[0] -= center[0];
     x[1] -= center[1];
     
