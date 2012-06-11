@@ -9,6 +9,8 @@
 #include "ABSymCurveCurvature.h"
 #include "ABSymCurve.h"
 
+#define EPSILON 0.000001
+
 ABSymCurveCurvature::ABSymCurveCurvature(string name, string input, int dimension, string time)
 : ABSymbol(name, 1), incard(dimension)
 {
@@ -48,7 +50,6 @@ void ABSymCurveCurvature::recalculate()
     }
     else {
         setValue(0.0, 0);
-		printf("C: %f\n", 0.0);
         return;
     }
     
@@ -71,9 +72,8 @@ void ABSymCurveCurvature::recalculate()
     }
 
     // We don't want to divide by zero... we'll get zero curvature anyway
-    if (vvdot == 0.0 || e2dot == 0.0) {
+    if (vvdot < EPSILON || e2dot < EPSILON) {
         setValue(0.0, 0);
-		printf("C: %f\n", 0.0);
         
     } else {
 
@@ -87,7 +87,6 @@ void ABSymCurveCurvature::recalculate()
         double K = kdot;
 
         setValue(K, 0);
-		printf("C: %f\n", K);
 
     }
     
