@@ -322,5 +322,14 @@ void ABSymCurve::printStats()
     printf("Curve '%s' stats:\n", getName().c_str());
     for (int i = 0; i < getCard(); i++) {
         printf("\tIn %d: %d curves\n", i, (int)curves[i].size());
+		for (int j=0; j<(int)curves[i].size(); j++) {
+			printf("\t\t%d: [%f to %f]\n", j, curves[i][j].tmin, curves[i][j].tmax);
+			printf("\t\t\titrange:%f\n", curves[i][j].itrange);
+			printf("\t\t\tcoef:");
+			for(int k=0; k<C_ORDER+1; k++)
+				printf("%f, ", curves[i][j].coef[k]);
+			printf("\n");
+			printf("\t\t\tr:%f\n", curves[i][j].r);
+		}
     }
 }
