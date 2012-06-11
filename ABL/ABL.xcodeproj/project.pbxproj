@@ -10,6 +10,8 @@
 		120E6D3A158604D40096FCF7 /* ABSymCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 120E6D38158604D40096FCF7 /* ABSymCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		120E6D3D158606CD0096FCF7 /* ABSymIntegrate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 120E6D3B158606CC0096FCF7 /* ABSymIntegrate.cpp */; };
 		120E6D3E158606CD0096FCF7 /* ABSymIntegrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 120E6D3C158606CC0096FCF7 /* ABSymIntegrate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		120E6D4E158626280096FCF7 /* ABCountIntegrate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 120E6D4C158626280096FCF7 /* ABCountIntegrate.cpp */; };
+		120E6D4F158626280096FCF7 /* ABCountIntegrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 120E6D4D158626280096FCF7 /* ABCountIntegrate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1223D4B51559E052005C3D7F /* GTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1223D4B31559E052005C3D7F /* GTimer.cpp */; };
 		1223D4B61559E052005C3D7F /* GTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1223D4B41559E052005C3D7F /* GTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127BA80F15657F7000352F21 /* GTimerThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 127BA80E15657F7000352F21 /* GTimerThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,6 +60,8 @@
 		120E6D38158604D40096FCF7 /* ABSymCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCard.h; sourceTree = "<group>"; };
 		120E6D3B158606CC0096FCF7 /* ABSymIntegrate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymIntegrate.cpp; sourceTree = "<group>"; };
 		120E6D3C158606CC0096FCF7 /* ABSymIntegrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymIntegrate.h; sourceTree = "<group>"; };
+		120E6D4C158626280096FCF7 /* ABCountIntegrate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABCountIntegrate.cpp; sourceTree = "<group>"; };
+		120E6D4D158626280096FCF7 /* ABCountIntegrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCountIntegrate.h; sourceTree = "<group>"; };
 		1223D4B31559E052005C3D7F /* GTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GTimer.cpp; sourceTree = "<group>"; };
 		1223D4B41559E052005C3D7F /* GTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimer.h; sourceTree = "<group>"; };
 		127BA80E15657F7000352F21 /* GTimerThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTimerThread.h; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				129B5FEB15855F04003C43FA /* ABSymForceRegress.cpp */,
 				129B5FEC15855F04003C43FA /* ABSymForceRegress.h */,
+				120E6D4C158626280096FCF7 /* ABCountIntegrate.cpp */,
+				120E6D4D158626280096FCF7 /* ABCountIntegrate.h */,
 			);
 			path = "Exotic Symbols";
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				120E6D3E158606CD0096FCF7 /* ABSymIntegrate.h in Headers */,
 				12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */,
 				C942CB631585F36600F9B17E /* ABSymCurveCurvature.h in Headers */,
+				120E6D4F158626280096FCF7 /* ABCountIntegrate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +351,7 @@
 				129B5FED15855F04003C43FA /* ABSymForceRegress.cpp in Sources */,
 				120E6D3D158606CD0096FCF7 /* ABSymIntegrate.cpp in Sources */,
 				C942CB661585F36F00F9B17E /* ABSymCurveCurvature.cpp in Sources */,
+				120E6D4E158626280096FCF7 /* ABCountIntegrate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

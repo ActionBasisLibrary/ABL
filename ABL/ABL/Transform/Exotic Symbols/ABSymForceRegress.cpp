@@ -62,30 +62,30 @@ void ABSymForceRegress<dimension>::pullValues()
     
     // First get position
     curve->getValues(val, t);
-//    printf("x:");
-//    for (int i = 0; i < dimension; i++)
-//        printf(" %f", val[i]);
-//    printf("\n");
+    printf("x:");
+    for (int i = 0; i < dimension; i++)
+        printf(" %f", val[i]);
+    printf("\n");
     
     for (int i = 0; i < dimension; i++)
         (*(Matrix*)XMatrix)[nextIdx][i] = val[i] - skew[i];
     
     // Next get velocity
     curve->getVelocity(val, t);
-//    printf("v:");
-//    for (int i = 0; i < dimension; i++)
-//        printf(" %f", val[i]);
-//    printf("\n");
+    printf("v:");
+    for (int i = 0; i < dimension; i++)
+        printf(" %f", val[i]);
+    printf("\n");
     
     for (int i = 0; i < dimension; i++)
         (*(Matrix*)XMatrix)[nextIdx][i+dimension] = val[i];
     
     // Next acceleration
     curve->getAcceleration(val, t);
-//    printf("a:");
-//    for (int i = 0; i < dimension; i++)
-//        printf(" %f", val[i]);
-//    printf("\n");
+    printf("a:");
+    for (int i = 0; i < dimension; i++)
+        printf(" %f", val[i]);
+    printf("\n");
 
     for (int i = 0; i < dimension; i++)
         (*((Vector**)AVects)[i])[nextIdx] = val[i];
