@@ -56,6 +56,22 @@ bool ABSymCurve::getValues(double *buff, double time)
     return true;
 }
 
+bool ABSymCurve::getVelocity(double *buff, double time)
+{
+    for (int i = 0; i < getCard(); i++) {
+        buff[i] = getValueAt(i, time, 1);
+    }
+    return true;
+}
+
+bool ABSymCurve::getAcceleration(double *buff, double time)
+{
+    for (int i = 0; i < getCard(); i++) {
+        buff[i] = getValueAt(i, time, 2);
+    }
+    return true;
+}
+
 void ABSymCurve::ABSymCurve::ABSymCurve::recalculate()
 {
     pullCurrent();
@@ -181,7 +197,7 @@ void ABSymCurve::cullPast()
  * curve that's storing the values and then calculates the actual value.
  * Starts by checking the last curve queried and its neighbor.
  */
-double ABSymCurve::getValueAt(int idx, double time)
+double ABSymCurve::getValueAt(int idx, double time, int deriv)
 {
     vector< Piece<C_ORDER> > &vect = curves[idx];
     int last = lastCurve[idx];
@@ -197,14 +213,14 @@ double ABSymCurve::getValueAt(int idx, double time)
             
             // Time is still in this curve
             if (vect[last].tmax >= time)
-                return vect[last].eval(time);
+                return vect[last].eval(time, deriv);
             
             else {
                 // Check following curve
                 if (vect.size() > last+1 &&
                     vect[last+1].tmin <= time &&
                     vect[last+1].tmax >= time)
-                    return vect[last+1].eval(time);
+                    return vect[last+1].eval(time, deriv);
             }
             
             // No dice, but at least we've eliminated all curves less that this one
@@ -232,7 +248,7 @@ double ABSymCurve::getValueAt(int idx, double time)
         // Otherwise, this piece must include the time
         else {
             lastCurve[idx] = h;
-            return p.eval(time);
+            return p.eval(time, deriv);
         }
     } while (l < r);
     

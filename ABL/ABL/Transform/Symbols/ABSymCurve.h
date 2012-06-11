@@ -23,8 +23,39 @@ private:
         : tmin(0), tmax(0)
         { for (int i = 0; i < order+1; i++) coef[i] = 0.0; }
         inline int getOrder() { return order; }
-        double eval(double t) {
+        double eval(double t, int deriv) {
             t = tNorm(t);
+            switch (deriv) {
+                case 0:
+                {
+                    double x = coef[order];
+                    for (int i = 0; i < order; i++) {
+                        x = x * t + coef[order-i-1];
+                    }
+                    return x;
+                }
+                case 1:
+                {
+                    if (order < 1) return 0;
+                    double x = coef[order]*order;
+                    for (int i = 0; i < order-1; i++) {
+                        x = x * t + coef[order-i-1]*(order-i-1);
+                    }
+                    return x;
+                }
+                case 2:
+                {
+                    if (order < 2) return 0;
+                    double x = coef[order]*order*(order-1);
+                    for (int i = 0; i < order-2; i++) {
+                        x = x * t + coef[order-i-1]*(order-i-1)*(order-i-2);
+                    }
+                    return x;
+                }
+                default:
+                    fprintf(stderr, "Requesting unimplemented derivative. Sorry.\n");
+                    return 0.0;
+            }
             double x = coef[order];
             for (int i = 0; i < order; i++) {
                 x = x * t + coef[order-i-1];
@@ -54,6 +85,8 @@ public:
     ~ABSymCurve();
 
     bool getValues(double *buff, double time);
+    bool getVelocity(double *buff, double time);
+    bool getAcceleration(double *buff, double time);
 
     void recalculate();
     
@@ -66,7 +99,7 @@ private:
     void updateCurves();
     void cullPast();
     
-    double getValueAt(int curve, double time);
+    double getValueAt(int curve, double time, int deriv = 0);
     
     static Piece<C_ORDER> getCurve(GCacheQueue &c, GCacheQueue &tc);
     static double distModify(int currSize, int maxSize);

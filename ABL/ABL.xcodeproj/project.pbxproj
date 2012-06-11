@@ -23,6 +23,8 @@
 		12856A5C1553353E00953855 /* ABTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A5A1553353E00953855 /* ABTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12856A66155336D800953855 /* ABSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12856A64155336D800953855 /* ABSymbol.cpp */; };
 		12856A67155336D800953855 /* ABSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 12856A65155336D800953855 /* ABSymbol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		129B5FED15855F04003C43FA /* ABSymForceRegress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129B5FEB15855F04003C43FA /* ABSymForceRegress.cpp */; };
+		129B5FEE15855F04003C43FA /* ABSymForceRegress.h in Headers */ = {isa = PBXBuildFile; fileRef = 129B5FEC15855F04003C43FA /* ABSymForceRegress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12A8CEB4156A15FE00991BD5 /* ABSymMean.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A8CEB3156A15FE00991BD5 /* ABSymMean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12A8CEB7156A161B00991BD5 /* ABSymMean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CEB6156A161A00991BD5 /* ABSymMean.cpp */; };
 		12A8CEBE156A184A00991BD5 /* ABSymCombine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12A8CEBC156A184900991BD5 /* ABSymCombine.cpp */; };
@@ -64,6 +66,8 @@
 		12856A5A1553353E00953855 /* ABTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABTransform.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		12856A64155336D800953855 /* ABSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABSymbol.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		12856A65155336D800953855 /* ABSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABSymbol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		129B5FEB15855F04003C43FA /* ABSymForceRegress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymForceRegress.cpp; sourceTree = "<group>"; };
+		129B5FEC15855F04003C43FA /* ABSymForceRegress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymForceRegress.h; sourceTree = "<group>"; };
 		12A8CEB3156A15FE00991BD5 /* ABSymMean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymMean.h; sourceTree = "<group>"; };
 		12A8CEB6156A161A00991BD5 /* ABSymMean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymMean.cpp; sourceTree = "<group>"; };
 		12A8CEBC156A184900991BD5 /* ABSymCombine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCombine.cpp; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		12856A571553351C00953855 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				129B5FE915855ECD003C43FA /* Exotic Symbols */,
 				127BA8191565B40300352F21 /* Symbols */,
 				12856A5A1553353E00953855 /* ABTransform.h */,
 				12856A591553353E00953855 /* ABTransform.cpp */,
@@ -160,6 +165,15 @@
 				12A8CED5156CC89C00991BD5 /* ABSymContinuous.h */,
 			);
 			path = Transform;
+			sourceTree = "<group>";
+		};
+		129B5FE915855ECD003C43FA /* Exotic Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				129B5FEB15855F04003C43FA /* ABSymForceRegress.cpp */,
+				129B5FEC15855F04003C43FA /* ABSymForceRegress.h */,
+			);
+			path = "Exotic Symbols";
 			sourceTree = "<group>";
 		};
 		12CB01C8156D7DB4002A9B05 /* External */ = {
@@ -235,6 +249,7 @@
 				12C3EAD1157DD49C00D5206F /* ABSymMinMax.h in Headers */,
 				12C3EAD5157DDF3A00D5206F /* ABSymNorm.h in Headers */,
 				12C3EAD9157DED0F00D5206F /* ABSymSmooth.h in Headers */,
+				129B5FEE15855F04003C43FA /* ABSymForceRegress.h in Headers */,
 				12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +323,7 @@
 				12C3EAD0157DD49C00D5206F /* ABSymMinMax.cpp in Sources */,
 				12C3EAD4157DDF3A00D5206F /* ABSymNorm.cpp in Sources */,
 				12C3EAD8157DED0F00D5206F /* ABSymSmooth.cpp in Sources */,
+				129B5FED15855F04003C43FA /* ABSymForceRegress.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
