@@ -38,5 +38,5 @@ void ABSymMean::recalculate()
     }
     setValues(sums);
     
-    dataState = DIRTY;
+    //dataState = DIRTY;
 }
