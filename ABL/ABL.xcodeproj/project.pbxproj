@@ -50,6 +50,8 @@
 		12C3EAD9157DED0F00D5206F /* ABSymSmooth.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C3EAD7157DED0D00D5206F /* ABSymSmooth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C90029161547C8820044B6AD /* ABL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90029151547C8820044B6AD /* ABL.cpp */; };
 		C90029171547C92F0044B6AD /* ABL.h in Headers */ = {isa = PBXBuildFile; fileRef = C90029131547C85A0044B6AD /* ABL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C942CB631585F36600F9B17E /* ABSymCurveCurvature.h in Headers */ = {isa = PBXBuildFile; fileRef = C942CB621585F36600F9B17E /* ABSymCurveCurvature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C942CB661585F36F00F9B17E /* ABSymCurveCurvature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C942CB651585F36F00F9B17E /* ABSymCurveCurvature.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		C90028BC1547AA040044B6AD /* ABL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABL-Prefix.pch"; sourceTree = "<group>"; };
 		C90029131547C85A0044B6AD /* ABL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABL.h; sourceTree = "<group>"; };
 		C90029151547C8820044B6AD /* ABL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ABL.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		C942CB621585F36600F9B17E /* ABSymCurveCurvature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSymCurveCurvature.h; sourceTree = "<group>"; };
+		C942CB651585F36F00F9B17E /* ABSymCurveCurvature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ABSymCurveCurvature.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				12A8CED0156CC85200991BD5 /* ABSymCurve.cpp */,
 				12C3EA47157C995000D5206F /* ABSymCurvature.h */,
 				12C3EA46157C995000D5206F /* ABSymCurvature.cpp */,
+				C942CB621585F36600F9B17E /* ABSymCurveCurvature.h */,
+				C942CB651585F36F00F9B17E /* ABSymCurveCurvature.cpp */,
 				12C3EACE157DD49400D5206F /* ABSymMinMax.cpp */,
 				12C3EACF157DD49600D5206F /* ABSymMinMax.h */,
 				12C3EAD2157DDF3800D5206F /* ABSymNorm.cpp */,
@@ -262,6 +268,7 @@
 				120E6D3A158604D40096FCF7 /* ABSymCard.h in Headers */,
 				120E6D3E158606CD0096FCF7 /* ABSymIntegrate.h in Headers */,
 				12A8CED3156CC86500991BD5 /* ABSymCurve.h in Headers */,
+				C942CB631585F36600F9B17E /* ABSymCurveCurvature.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +343,7 @@
 				12C3EAD8157DED0F00D5206F /* ABSymSmooth.cpp in Sources */,
 				129B5FED15855F04003C43FA /* ABSymForceRegress.cpp in Sources */,
 				120E6D3D158606CD0096FCF7 /* ABSymIntegrate.cpp in Sources */,
+				C942CB661585F36F00F9B17E /* ABSymCurveCurvature.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
