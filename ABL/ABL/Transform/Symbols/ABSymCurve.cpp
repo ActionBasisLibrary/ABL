@@ -56,6 +56,21 @@ bool ABSymCurve::getValues(double *buff, double time)
     return true;
 }
 
+bool ABSymCurve::getDerivative(double *buff, double time, int tag)
+{
+    switch (tag) {
+        case 0:
+            return getValues(buff, time);
+        case 1:
+            return getVelocity(buff, time);
+        case 2:
+            return getAcceleration(buff, time);
+            
+        default:
+            return false;
+    }
+}
+
 bool ABSymCurve::getVelocity(double *buff, double time)
 {
     for (int i = 0; i < getCard(); i++) {

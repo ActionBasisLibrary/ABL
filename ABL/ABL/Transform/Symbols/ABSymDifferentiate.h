@@ -22,7 +22,7 @@ private:
     double *lastVals;
     
 public:
-    ABSymDifferentiate(string name, vector<string> &inputs, string timeNode);
+    ABSymDifferentiate(string name, int card, string inputs, string timeNode);
     ~ABSymDifferentiate();
     
     virtual void recalculate();

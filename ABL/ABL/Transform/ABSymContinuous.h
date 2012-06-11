@@ -21,6 +21,7 @@ public:
     : ABSymbol(name, card) {}
     
     virtual bool getValues(double *buff, double time) { return false; }
+    virtual bool getDerivative(double *buff, double time, int tag) { return false; }
 };
 
 #endif

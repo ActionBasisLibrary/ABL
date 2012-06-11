@@ -68,6 +68,13 @@ private:
         inline double tNorm(double t) {
             return (t - tmin)*itrange;
         }
+        string toString() {
+            stringstream ss;
+            ss << "[" << tmin << ", " << tmax << "]:";
+            for (int i = 0; i <= order; i++)
+                ss << " " << coef[i];
+            return ss.str();
+        }
     };
 
     int order;
@@ -85,6 +92,7 @@ public:
     ~ABSymCurve();
 
     bool getValues(double *buff, double time);
+    bool getDerivative(double *buff, double time, int tag);
     bool getVelocity(double *buff, double time);
     bool getAcceleration(double *buff, double time);
 

@@ -340,7 +340,7 @@ void ABL::testCalculusSymbols()
     ABSymTime *time = new ABSymTime("time", &timer);
     
     vector<string> vect(names, names+1);
-    ABSymDifferentiate *diff = new ABSymDifferentiate("dx", vect, "time");
+    ABSymDifferentiate *diff = new ABSymDifferentiate("dx", 1, "x", "time");
     
     vect = vector<string>(names+1,names+2);
     ABSymTick *tick = new ABSymTick("tick", vect, &ttimer, .01);

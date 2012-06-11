@@ -12,21 +12,15 @@
 #include "ABSymbol.h"
 #include "ABSymCurve.h"
 
-#include "../../External/cmatrix"
-
-typedef techsoft::matrix<double> Matrix;
-typedef techsoft::valarray<double> Vector;
-
-//template<int dimension>
-
 template <int dimension>
 class ABSymForceRegress : public ABSymbol {
-    Matrix *XMatrix;
-    Vector *AVects;
-    int nextIdx;
+    void *XMatrix;
+    void *AVects;
+    int nextIdx, maxData, numData;
+    double skew[dimension];
     
 public:
-    ABSymForceRegress(string name, string curve, string time, int maxData);
+    ABSymForceRegress(string name, string curve, string time, int maxData, double *askew = NULL);
     ~ABSymForceRegress();
     
     virtual void recalculate();
@@ -34,6 +28,8 @@ public:
 private:
     void pullValues();
     void fitMatrix();
+    
+    int colLength();
 };
 
 #endif

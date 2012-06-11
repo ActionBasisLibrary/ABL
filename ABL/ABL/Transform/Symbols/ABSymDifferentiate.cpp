@@ -8,27 +8,23 @@
 
 #include "ABSymDifferentiate.h"
 
-ABSymDifferentiate::ABSymDifferentiate(string name, vector<string> &inputs, string timeNode)
-: ABSymbol(name)
+ABSymDifferentiate::ABSymDifferentiate(string name, int card, string input, string timeNode)
+: ABSymbol(name, card)
 {
     // Verify that "time" is in inputs (otherwise it won't link correctly)
-    if (find(inputs.begin(), inputs.end(), timeNode) == inputs.end()) {
-        inputs.push_back(timeNode);
-    } else {
-        // Next, verify that "time" is the last input and switch if not
-        timeIdx = find(inputs.begin(), inputs.end(), timeNode) - inputs.begin();
-        if (timeIdx != inputs.size()-1)
-            swap(inputs[timeIdx], inputs[inputs.size()-1]);
-    }
+    vector<string> names;
+    names.push_back(input);
+    names.push_back(timeNode);
     
-    setCard(inputs.size()-1);
-    setInputs(inputs);
+    setInputs(names);
     
-    timeIdx = inputs.size()-1;
+    timeIdx = 1;
     
     lastVals = new double[getCard()];
     for (int i = 0; i < getCard(); i++)
         lastVals[i] = 0.0;
+    
+    setValues(lastVals);
     
     lastTime = 0;
 }
@@ -40,23 +36,23 @@ ABSymDifferentiate::~ABSymDifferentiate()
 
 void ABSymDifferentiate::recalculate()
 {
-    double t = (inputSyms[timeIdx] ? inputSyms[timeIdx]->getValue(0) : -1.0);
-    if (t == lastTime) return;
+    double t = inputSyms[timeIdx]->getValue(0);
     
-    double x[getCard()];
-    for (int i = 0; i < getCard(); i++)
-        x[i] = (inputSyms[i] ? inputSyms[i]->getValue(0) : 0.0);
+    // If t is too close, peace out
+    static double EPS = 1e-6;
+    if (fabs(t - lastTime) < EPS) return;
     
+    // Calculate inverse
     double idt = 1.0/(t - lastTime);
     lastTime = t;
     
-    // Calculate derivatives
-    double dx0[getCard()];
-    getValues(dx0);
+    // Grab current values
+    double x[getCard()];
+    inputSyms[0]->getValues(x);
     
+    // Grab differences
     double dx[getCard()];
     for (int i = 0; i < getCard(); i++)
-//        dx[i] = ((x[i]-lastVals[i])*idt + dx0[i])*.5;
         dx[i] = (x[i] - lastVals[i])*idt;
     memcpy(lastVals, x, sizeof(double)*getCard());
     

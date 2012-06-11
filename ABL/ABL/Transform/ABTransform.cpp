@@ -50,12 +50,16 @@ void ABTransform::updateAndGetValues(string name, double *buff)
     }
 }
 
-void ABTransform::getValues(string name, double *buff, double time)
+void ABTransform::getValues(string name, double *buff, double time, int derivative)
 {
     if (!linked) link();
     
-    if (symMap.count(name) > 0)
-        ((ABSymContinuous*)symbols.at(symMap[name]))->getValues(buff, time);
+    if (symMap.count(name) > 0) {
+        if (derivative == 0)
+            ((ABSymContinuous*)symbols.at(symMap[name]))->getValues(buff, time);
+        else
+            ((ABSymContinuous*)symbols.at(symMap[name]))->getDerivative(buff, time, derivative);
+    }
 }
 
 // Methods to modify symbol tree

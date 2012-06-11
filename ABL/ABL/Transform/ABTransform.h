@@ -85,7 +85,7 @@ public:
      @param buff    buffer to fill
      @param time    time to use for calculation
      */
-    void getValues(string name, double *buff, double time);
+    void getValues(string name, double *buff, double time, int derivative = 0);
     
     // Methods to modify symbol tree
     
